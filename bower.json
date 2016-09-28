@@ -9,7 +9,8 @@
     "paper-drawer-panel": "PolymerElements/paper-drawer-panel#^1.0.10",
     "iron-overlay-behavior": "PolymerElements/iron-overlay-behavior#^1.8.6",
     "paper-progress": "PolymerElements/paper-progress#^1.0.10",
-    "app-layout": "PolymerElements/app-layout#^0.10.4"
+    "app-layout": "PolymerElements/app-layout#^0.10.4",
+    "iron-pages": "PolymerElements/iron-pages#^1.0.8"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
