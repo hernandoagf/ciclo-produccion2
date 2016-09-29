@@ -3,7 +3,6 @@
 <link rel="import" href="../../bower_components/paper-styles/typography.html">
 <link rel="import" href="../../bower_components/app-layout/app-grid/app-grid-style.html">
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
-<link rel="import" href="../ciclo-produccion-app/ciclo-produccion-app.html">
 
 <dom-module id="ciclo-produccion-grado">
 	<template>
@@ -28,23 +27,25 @@
 		</style>
 
 		<iron-ajax
-              auto
-              url="../../data/inyeccion_homo.json"
-              last-response="{{data1}}"
-              handle-as="json">
+          auto
+          url="../../data/inyeccion_homo.json"
+          last-response="{{data}}"
+          handle-as="json">
         </iron-ajax>
+
         <div class="app-grid" has-aspect-ratio>
-          <template is="dom-repeat" id="grado1" items="[[data1]]">
-            <div class="item">
-              <paper-card image="../../images/refinery.jpg" style="[[item.col]]" on-tap="changeselected">
-                <div class="card-content">
-                  <div class="grado-header">[[item.title]]</div>
-                </div>
-              </paper-card>
-            </div>
-            <!--<paper-button onclick="backdrop.open()" on-tap="toggleSelection1" raised>[[item.title]]</paper-button>-->
-          </template>
-        </div>
+            <template is="dom-repeat" id="grado" items="[[data]]">
+              <div class="item">
+                <paper-card image="../../images/refinery.jpg" style="[[item.col]]" on-tap="selectgrado">
+                  <div class="card-content">
+                    <div class="grado-header">[[item.title]]</div>
+                  </div>
+                </paper-card>
+              </div>
+            </template>
+            <array-selector id="selector" items="{{data}}" selected="{{selected}}"></array-selector>
+            <div>[[item.title]]</div>
+          </div>
 
 	</template>	
 
@@ -52,12 +53,25 @@
 		Polymer({
 			is: "ciclo-produccion-grado",
 
+		    properties: {
+		      item: {
+		      	type: Object,
+		      	computed: '_computeItem(selected)',
+		      	notify: true
+		      }
+		    },
 
+			selectgrado: function(e){
+		        var item1 = this.$.grado.itemForElement(e.target);
+		        this.$.selector.select(item1);
+		        console.log(item1)
+		        //var pages = document.querySelector('iron-pages');
+      			//pages.select(1);
+		    },
 
-			changeselected: function(){
-				console.log(this.selectedname);
-			//	selectedname = "detalle"
-			}
+		    _computeItem: function(selected){
+		    	return item1;
+		    }
 		})
 	</script>
 </dom-module>

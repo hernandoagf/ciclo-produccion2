@@ -1,16 +1,27 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="ciclo-produccion-grado.html">
+
 <dom-module id="ciclo-produccion-detalle">
 	<template>
 		<style>
 			
 		</style>
 
-
+		<div>[[item.title]]</div>
+		<div>Hola</div>
 
 	</template>
 
 	<script>
 		Polymer({
 			is: "ciclo-produccion-detalle",
+
+			properties: {
+		      item: Object
+		    },
+
+
+
 		})
 	</script>
 </dom-module>

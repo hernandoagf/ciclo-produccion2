@@ -10,6 +10,8 @@
 <link rel="import" href="../../bower_components/paper-styles/typography.html">
 <link rel="import" href="../../bower_components/app-layout/app-grid/app-grid-style.html">
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-grado.html">
+<link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-detalle.html">
 
 <dom-module id="ciclo-produccion-app">
   <template>
@@ -18,8 +20,8 @@
         height: 100vh;
         display: block;
         background-color: var(--paper-grey-300);
-        --app-grid-columns: 5;
-        --app-grid-item-height: 70%;
+        /*--app-grid-columns: 5;
+        --app-grid-item-height: 70%;*/
       }
       paper-toolbar{
         background-color: var(--paper-red-700);
@@ -63,16 +65,16 @@
       </paper-toolbar>
       <div class="fit">
         
-        <iron-ajax
+        <!--<iron-ajax
           auto
           url="../../data/inyeccion_homo.json"
           last-response="{{data}}"
           handle-as="json">
-        </iron-ajax>
+        </iron-ajax>-->
 
         <iron-pages selected="0">
         
-          <div class="app-grid" has-aspect-ratio>
+          <!--<div class="app-grid" has-aspect-ratio>
             <template is="dom-repeat" id="grado" items="[[data]]">
               <div class="item">
                 <paper-card image="../../images/refinery.jpg" style="[[item.col]]" on-tap="selectgrado">
@@ -83,16 +85,20 @@
               </div>
             </template>
             <array-selector id="selector" items="{{data}}" selected="{{selected}}"></array-selector>
-          </div>
-
-          <div id="detallegrado" class="fit layout horizontal">
+          </div>-->
+          <ciclo-produccion-grado data="{{data}}"></ciclo-produccion-grado>
+          <ciclo-produccion-detalle></ciclo-produccion-detalle>
+          <!--<div id="detallegrado" class="fit layout horizontal">
             <div class="maininfogrado layout vertical" style="[[selected.col]]">
               <img src="../../images/refinery.jpg" width="100%"></img>
               <div class="grado-name">[[selected.title]]</div>
             </div>
-          </div>
+          </div>-->
 
         </iron-pages>
+
+        <div>{{data}}</div>
+
       </div>
     </paper-header-panel>
 
@@ -101,16 +107,17 @@
   <script>
     Polymer({
       is: 'ciclo-produccion-app',
-      
 
-      selectgrado: function(e){
-        var item = this.$.grado.itemForElement(e.target);
-        this.$.selector.select(item);  
-        var pages = document.querySelector('iron-pages');
-        pages.select(1);
-        document.getElementById("toolbar").style.backgroundColor = "white";
-        document.getElementById("toolbar").style.color = "#676767";
-      },
+
+
+      // selectgrado: function(e){
+      //   var item = this.$.grado.itemForElement(e.target);
+      //   this.$.selector.select(item);  
+      //   var pages = document.querySelector('iron-pages');
+      //   pages.select(1);
+      //   document.getElementById("toolbar").style.backgroundColor = "white";
+      //   document.getElementById("toolbar").style.color = "#676767";
+      // },
 
 
     });
