@@ -1,5 +1,5 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="ciclo-produccion-grado.html">
+<link rel="import" href="ciclo-produccion-test.html">
 
 <dom-module id="ciclo-produccion-detalle">
 	<template>
@@ -10,6 +10,8 @@
 		<div>[[item.title]]</div>
 		<div>Hola</div>
 
+		<ciclo-produccion-test probando={{probando}}></ciclo-produccion-test>
+
 	</template>
 
 	<script>
@@ -17,10 +19,13 @@
 			is: "ciclo-produccion-detalle",
 
 			properties: {
-		      item: Object
+		      item: Object,
+		      hola: String
 		    },
 
-
+		    ready: function(){
+		    	console.log(this.probando + "ciclo-produccion-detalle");
+		    }
 
 		})
 	</script>

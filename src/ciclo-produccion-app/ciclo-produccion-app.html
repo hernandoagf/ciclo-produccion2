@@ -12,6 +12,7 @@
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-grado.html">
 <link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-detalle.html">
+<link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-test.html">
 
 <dom-module id="ciclo-produccion-app">
   <template>
@@ -86,8 +87,8 @@
             </template>
             <array-selector id="selector" items="{{data}}" selected="{{selected}}"></array-selector>
           </div>-->
-          <ciclo-produccion-grado data="{{data}}"></ciclo-produccion-grado>
-          <ciclo-produccion-detalle></ciclo-produccion-detalle>
+          <ciclo-produccion-grado data="{{data}}" hola="{{hola}}"></ciclo-produccion-grado>
+          <ciclo-produccion-detalle hola="{{hola}}"></ciclo-produccion-detalle>
           <!--<div id="detallegrado" class="fit layout horizontal">
             <div class="maininfogrado layout vertical" style="[[selected.col]]">
               <img src="../../images/refinery.jpg" width="100%"></img>
@@ -101,14 +102,16 @@
 
       </div>
     </paper-header-panel>
-
+    <ciclo-produccion-test probando="{{probando}}"></ciclo-produccion-test>
   </template>
 
   <script>
     Polymer({
       is: 'ciclo-produccion-app',
 
-
+      ready: function(){
+          console.log(this.probando + "ciclo-produccion-app");
+      }
 
       // selectgrado: function(e){
       //   var item = this.$.grado.itemForElement(e.target);
@@ -120,6 +123,6 @@
       // },
 
 
-    });
+    })
   </script>
 </dom-module>
