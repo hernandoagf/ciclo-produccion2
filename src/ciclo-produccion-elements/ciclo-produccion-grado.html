@@ -70,20 +70,20 @@
 		    ready: function(){
 		    	console.log(this.probando + "ciclo-produccion-grado");
 		    },
-		    selectgrado: function(){
-		    	this.propuno = "Propiedad 1 cambiada";
+			selectgrado: function(e){
+				this.propuno = "Propiedad 1 cambiada";
 		    	console.log(this.propuno + ' desde ciclo-produccion-grado');
-		    }
-			/*selectgrado: function(e){
+
 		        var item = this.$.grado.itemForElement(e.target);
 		        this.$.selector.select(item);
 		        console.log(item);
-		        //var pages = document.querySelector('iron-pages');
-      			//pages.select(1);
-      			this.set(grado = item);
+
+		        var pages = document.querySelector('iron-pages');
+      			pages.select(1);
+      			/*this.set(grado = item);
       			console.log(item.name);
-      			console.log(grado.name, grado.title, grado.rangoif, grado.etileno);
-		    }*/
+      			console.log(grado.name, grado.title, grado.rangoif, grado.etileno);*/
+		    }
 		})
 	</script>
 </dom-module>
