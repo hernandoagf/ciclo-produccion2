@@ -1,5 +1,4 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="ciclo-produccion-test.html">
 
 <dom-module id="ciclo-produccion-detalle">
 	<template>
@@ -9,9 +8,9 @@
 
 		<div>[[propdos]]</div>
 		<div>Hola</div>
-
-		<ciclo-produccion-test probando={{probando}}></ciclo-produccion-test>
-
+		<div>[[gradoselec.title]]</div>
+		<div>[[gradoselec.rangoif]]</div>
+		<div>[[gradoselec.etileno]]</div>
 	</template>
 
 	<script>
@@ -19,22 +18,20 @@
 			is: "ciclo-produccion-detalle",
 
 			properties: {
-		      item: Object,
-		      hola: String,
-		      propdos: {
-		      	type: String,
-		      	observer: '_propdosChanged'
+		      gradoselec: {
+		      	type: Object,
+		      	observer: 'gradoselecChanged'
 		      }
 		    },
 
 		    ready: function(){
-		    	console.log(this.probando + "ciclo-produccion-detalle");
+
 		    },
 		    attached: function(){
-		    	console.log(this.propdos);
+		    	//console.log(this.propdos);
 		    },
-		    _propdosChanged: function(){
-		    	console.log(this.propdos + ' desde ciclo-produccion-detalle');
+		    gradoselecChanged: function(){
+		    	console.log(this.gradoselec);
 		    }
 		})
 	</script>

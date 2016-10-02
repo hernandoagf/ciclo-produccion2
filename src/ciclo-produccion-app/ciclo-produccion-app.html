@@ -12,7 +12,6 @@
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-grado.html">
 <link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-detalle.html">
-<link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-test.html">
 
 <dom-module id="ciclo-produccion-app">
   <template>
@@ -66,40 +65,14 @@
       </paper-toolbar>
       <div class="fit">
         
-        <!--<iron-ajax
-          auto
-          url="../../data/inyeccion_homo.json"
-          last-response="{{data}}"
-          handle-as="json">
-        </iron-ajax>-->
-
         <iron-pages selected="0">
 
-          <!--<div class="app-grid" has-aspect-ratio>
-            <template is="dom-repeat" id="grado" items="[[data]]">
-              <div class="item">
-                <paper-card image="../../images/refinery.jpg" style="[[item.col]]" on-tap="selectgrado">
-                  <div class="card-content">
-                    <div class="grado-header">[[item.title]]</div>
-                  </div>
-                </paper-card>
-              </div>
-            </template>
-            <array-selector id="selector" items="{{data}}" selected="{{selected}}"></array-selector>
-          </div>-->
-          <ciclo-produccion-grado data="{{data}}" hola="{{hola}}" propuno={{propuno}}></ciclo-produccion-grado>
-          <ciclo-produccion-detalle hola="{{hola}}" propdos={{propuno}}></ciclo-produccion-detalle>
-          <!--<div id="detallegrado" class="fit layout horizontal">
-            <div class="maininfogrado layout vertical" style="[[selected.col]]">
-              <img src="../../images/refinery.jpg" width="100%"></img>
-              <div class="grado-name">[[selected.title]]</div>
-            </div>
-          </div>-->
+          <ciclo-produccion-grado grado={{grado}}></ciclo-produccion-grado>
+          <ciclo-produccion-detalle gradoselec={{grado}}></ciclo-produccion-detalle>
 
         </iron-pages>
       </div>
     </paper-header-panel>
-    <ciclo-produccion-test probando="{{probando}}"></ciclo-produccion-test>
   </template>
 
   <script>
@@ -107,7 +80,7 @@
       is: 'ciclo-produccion-app',
 
       ready: function(){
-          console.log(this.probando + "ciclo-produccion-app");
+
       }
 
       // selectgrado: function(e){
