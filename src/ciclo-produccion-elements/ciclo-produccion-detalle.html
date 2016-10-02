@@ -20,13 +20,22 @@
 
 			properties: {
 		      item: Object,
-		      hola: String
+		      hola: String,
+		      propdos: {
+		      	type: String,
+		      	observer: '_propdosChanged'
+		      }
 		    },
 
 		    ready: function(){
 		    	console.log(this.probando + "ciclo-produccion-detalle");
+		    },
+		    attached: function(){
+		    	console.log(this.propdos);
+		    },
+		    _propdosChanged: function(){
+		    	console.log(this.propdos + ' desde ciclo-produccion-detalle');
 		    }
-
 		})
 	</script>
 </dom-module>

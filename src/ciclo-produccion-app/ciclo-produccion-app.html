@@ -74,7 +74,7 @@
         </iron-ajax>-->
 
         <iron-pages selected="0">
-        
+
           <!--<div class="app-grid" has-aspect-ratio>
             <template is="dom-repeat" id="grado" items="[[data]]">
               <div class="item">
@@ -87,8 +87,8 @@
             </template>
             <array-selector id="selector" items="{{data}}" selected="{{selected}}"></array-selector>
           </div>-->
-          <ciclo-produccion-grado data="{{data}}" hola="{{hola}}"></ciclo-produccion-grado>
-          <ciclo-produccion-detalle hola="{{hola}}"></ciclo-produccion-detalle>
+          <ciclo-produccion-grado data="{{data}}" hola="{{hola}}" propuno={{propuno}}></ciclo-produccion-grado>
+          <ciclo-produccion-detalle hola="{{hola}}" propdos={{propuno}}></ciclo-produccion-detalle>
           <!--<div id="detallegrado" class="fit layout horizontal">
             <div class="maininfogrado layout vertical" style="[[selected.col]]">
               <img src="../../images/refinery.jpg" width="100%"></img>
@@ -97,9 +97,6 @@
           </div>-->
 
         </iron-pages>
-
-        <div>{{data}}</div>
-
       </div>
     </paper-header-panel>
     <ciclo-produccion-test probando="{{probando}}"></ciclo-produccion-test>
