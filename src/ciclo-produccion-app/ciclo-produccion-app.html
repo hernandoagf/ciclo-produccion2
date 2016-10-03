@@ -12,6 +12,10 @@
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-grado.html">
 <link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-detalle.html">
+<link rel="import" href="../../bower_components/neon-animation/neon-animated-pages.html">
+<link rel="import" href="../../bower_components/neon-animation/animations/slide-from-right-animation.html">
+<link rel="import" href="../../bower_components/neon-animation/animations/slide-left-animation.html">
+
 
 <dom-module id="ciclo-produccion-app">
   <template>
@@ -63,12 +67,12 @@
       </paper-toolbar>
       <div class="fit">
         
-        <iron-pages selected="0">
+        <neon-animated-pages selected="0" entry-animation="slide-from-right-animation" exit-animation="slide-left-animation">
 
-          <ciclo-produccion-grado grado={{grado}}></ciclo-produccion-grado>
-          <ciclo-produccion-detalle gradoselec={{grado}}></ciclo-produccion-detalle>
+          <neon-animatable><ciclo-produccion-grado grado={{grado}}></ciclo-produccion-grado></neon-animatable>
+          <neon-animatable><ciclo-produccion-detalle gradoselec={{grado}}></ciclo-produccion-detalle></neon-animatable>
 
-        </iron-pages>
+        </neon-animated-pages>
       </div>
     </paper-header-panel>
   </template>
