@@ -1,20 +1,31 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
 
 <dom-module id="ciclo-produccion-detalle">
 	<template>
 		<style>
 			#grado_detalle{
-				height: 93vh;
+				height: 91.7vh;
 				overflow: hidden;
 			}
 			#leftpanel{
 				width: 30vw;
-				text-align: left;
+				text-align: center;
 			}
 			.panel-header{
-				@apply(--paper-font-display1);
 				color: white;
-				padding: 30px;
+				margin: 10px;
+			}
+			.panel-header div{
+				@apply(--layout-flex);
+			}
+			#btnback paper-icon-button{
+				float: left;
+			}
+			#panel-title{
+				@apply(--paper-font-display1);
+				padding-top: 5px;
 			}
 			#gradocontent{
 				padding: 30px 0 0 20px;
@@ -32,7 +43,7 @@
 				font-weight: 300;
 				text-align: left;
 			}
-			#especcont{
+			.especcont{
 				margin: 10px 20px 10px 20px;
 			}
 			#especcontrow1 div{
@@ -67,12 +78,22 @@
 			#rutasalidacard{
 				margin-left: 10px;
 			}
+			.cardruta{
+				padding: 5px 0 5px 0;
+				text-align: left;
+			}
 		</style>
 
 		<div id="grado_detalle" class="container layout horizontal">
 
 			<paper-card id="leftpanel" style="[[gradoselec.col]]" image="[[gradoselec.img]]" elevation="0">
-				<div class="panel-header">[[gradoselec.title]]</div>
+				<div class="panel-header layout horizontal">
+					<div id="btnback">
+						<paper-icon-button icon="arrow-back" class="white" on-tap="backtolist"></paper-icon-button>
+					</div>
+					<div id="panel-title">[[gradoselec.title]]</div>
+					<div></div>
+				</div>
 			</paper-card>
 
 			<div id="gradocontent" class="flex">
@@ -80,21 +101,21 @@
 
 					<paper-card id="especcard">
 						<div class="cardtitle">Especificaciones</div>
-						<div id="especcont" class="layout vertical">
+						<div class="especcont layout vertical">
 							<div id="especcontrow1" class="layout horizontal">
 								<div id="especif">
 									<div class="proptitle">Rango IF:</div>
-									<div class="flex">[[gradoselec.title]]</div>
+									<div class="flex">[[gradoselec.rangoif]]</div>
 								</div>
 								<div id="especetileno">
 									<div class="proptitle">Etileno:</div>
-									<div class="flex">[[gradoselec.rangoif]]</div>
+									<div class="flex">[[gradoselec.etileno]]</div>
 								</div>
 							</div>
 							<div id="especcontrow2" class="layout horizontal">
 								<div id="especreceta">
 									<div class="proptitle">Receta:</div>
-									<div class="flex">[[gradoselec.etileno]]</div>
+									<div class="flex">[[gradoselec.receta]]</div>
 								</div>
 							</div>
 						</div>
@@ -103,11 +124,12 @@
 					<div id="rutas" class="layout horizontal">
 						<paper-card id="rutaentradacard" class="flex">
 							<div class="cardtitle">Ruta entrada</div>
-							<div>[[gradoselec.rutaentrada]]</div>
+							<div class="especcont cardruta">[[gradoselec.rutaentrada]]</div>
 						</paper-card>
 
 						<paper-card id="rutasalidacard" class="flex">
 							<div class="cardtitle">Ruta salida</div>
+							<div class="especcont cardruta">[[gradoselec.rutasalida]]</div>
 						</paper-card>
 					</div>
 
@@ -131,10 +153,19 @@
 
 		    },
 		    attached: function(){
-		    	//console.log(this.propdos);
+
 		    },
 		    gradoselecChanged: function(){
 		    	console.log(this.gradoselec);
+		    },
+		    backtolist: function(){
+		    	var pages = document.querySelector('iron-pages');
+		    	pages.select(0);
+		    	this.changetoolbarback();
+		    },
+		    changetoolbarback: function(){
+		    	document.getElementById("toolbar").style.backgroundColor = "#d32f2f";
+				document.getElementById("toolbar").style.color = "white";
 		    }
 		})
 	</script>
