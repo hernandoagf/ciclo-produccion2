@@ -5,7 +5,7 @@
 		"rangoif":"1,1 - 1,4 - 1,7",
 		"img":"../../images/refinery.jpg",
 		"etileno":"2,5 - 3,0%",
-		"rutaentrada":"B-328, J-300, F-404",
+		"rutaentrada":["B-328", "J-300", "F-404"],
 		"rutasalida":"",
 		"col":"background-color: #EF6C00;"
 	},

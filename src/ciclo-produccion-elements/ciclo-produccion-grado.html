@@ -64,15 +64,16 @@
 			selectgrado: function(e){
 		        var item = this.$.grado.itemForElement(e.target);
 		        this.$.selector.select(item);
-		        console.log(item);
-
 		        this.grado = item;
 
 		        var pages = document.querySelector('iron-pages');
       			pages.select(1);
-      			/*this.set(grado = item);
-      			console.log(item.name);
-      			console.log(grado.name, grado.title, grado.rangoif, grado.etileno);*/
+
+      			this.changetoolbar();
+		    },
+		    changetoolbar: function(){
+		    	document.getElementById("toolbar").style.backgroundColor = "white";
+				document.getElementById("toolbar").style.color = "#676767";
 		    }
 		})
 	</script>

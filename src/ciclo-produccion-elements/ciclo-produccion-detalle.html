@@ -3,14 +3,117 @@
 <dom-module id="ciclo-produccion-detalle">
 	<template>
 		<style>
-			
+			#grado_detalle{
+				height: 93vh;
+				overflow: hidden;
+			}
+			#leftpanel{
+				width: 30vw;
+				text-align: left;
+			}
+			.panel-header{
+				@apply(--paper-font-display1);
+				color: white;
+				padding: 30px;
+			}
+			#gradocontent{
+				padding: 30px 0 0 20px;
+			}
+			#gradocards{
+				width: 80%;
+				padding-left: 10%;
+			}
+			#gradocards paper-card{
+				margin-bottom: 20px;
+			}
+			.cardtitle{
+				margin: 10px 20px 10px 20px;
+				@apply(--paper-font-title);
+				font-weight: 300;
+				text-align: left;
+			}
+			#especcont{
+				margin: 10px 20px 10px 20px;
+			}
+			#especcontrow1 div{
+				@apply(--layout-horizontal);
+				padding: 5px 0 5px 0;
+			}
+			#especcontrow2 div{
+				@apply(--layout-horizontal);
+				padding: 5px 0 5px 0;
+			}
+			#especif{
+				width: 50%;
+			}
+			#especetileno{
+				width: 50%;
+			}
+			#especreceta{
+				width: 50%;
+			}
+			.proptitle{
+				width: 30%;
+			}
+			.propprop{
+				width: 80%;
+			}
+			#rutas{
+				@apply(--layout-justified);
+			}
+			#rutaentradacard{
+				margin-right: 10px;
+			}
+			#rutasalidacard{
+				margin-left: 10px;
+			}
 		</style>
 
-		<div>[[propdos]]</div>
-		<div>Hola</div>
-		<div>[[gradoselec.title]]</div>
-		<div>[[gradoselec.rangoif]]</div>
-		<div>[[gradoselec.etileno]]</div>
+		<div id="grado_detalle" class="container layout horizontal">
+
+			<paper-card id="leftpanel" style="[[gradoselec.col]]" image="[[gradoselec.img]]" elevation="0">
+				<div class="panel-header">[[gradoselec.title]]</div>
+			</paper-card>
+
+			<div id="gradocontent" class="flex">
+				<div id="gradocards" class="layout vertical">
+
+					<paper-card id="especcard">
+						<div class="cardtitle">Especificaciones</div>
+						<div id="especcont" class="layout vertical">
+							<div id="especcontrow1" class="layout horizontal">
+								<div id="especif">
+									<div class="proptitle">Rango IF:</div>
+									<div class="flex">[[gradoselec.title]]</div>
+								</div>
+								<div id="especetileno">
+									<div class="proptitle">Etileno:</div>
+									<div class="flex">[[gradoselec.rangoif]]</div>
+								</div>
+							</div>
+							<div id="especcontrow2" class="layout horizontal">
+								<div id="especreceta">
+									<div class="proptitle">Receta:</div>
+									<div class="flex">[[gradoselec.etileno]]</div>
+								</div>
+							</div>
+						</div>
+					</paper-card>
+
+					<div id="rutas" class="layout horizontal">
+						<paper-card id="rutaentradacard" class="flex">
+							<div class="cardtitle">Ruta entrada</div>
+							<div>[[gradoselec.rutaentrada]]</div>
+						</paper-card>
+
+						<paper-card id="rutasalidacard" class="flex">
+							<div class="cardtitle">Ruta salida</div>
+						</paper-card>
+					</div>
+
+				</div>
+			</div>
+		</div>
 	</template>
 
 	<script>
