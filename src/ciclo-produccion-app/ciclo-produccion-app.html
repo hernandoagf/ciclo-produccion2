@@ -4,6 +4,8 @@
 <link rel="import" href="../../bower_components/paper-styles/typography.html">
 <link rel="import" href="../../bower_components/paper-toolbar/paper-toolbar.html">
 <link rel="import" href="../../bower_components/paper-header-panel/paper-header-panel.html">
+<link rel="import" href="../../bower_components/app-route/app-location.html">
+<link rel="import" href="../../bower_components/app-route/app-route.html">
 <link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
 <link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="../../bower_components/paper-styles/color.html">
@@ -12,9 +14,6 @@
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-grado.html">
 <link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-detalle.html">
-<link rel="import" href="../../bower_components/neon-animation/neon-animated-pages.html">
-<link rel="import" href="../../bower_components/neon-animation/animations/slide-from-right-animation.html">
-<link rel="import" href="../../bower_components/neon-animation/animations/slide-left-animation.html">
 
 
 <dom-module id="ciclo-produccion-app">
@@ -60,6 +59,13 @@
       }
     </style>
 
+    <app-location route="{{route}}"></app-location>
+    <app-route
+        route="{{route}}"
+        pattern="/:page"
+        data="{{routeData}}"
+        tail="{{subroute}}"></app-route>
+
     <!-- paper-header-panel must have an explicit height -->
     <paper-header-panel class="flex">
       <paper-toolbar id="toolbar">
@@ -67,12 +73,12 @@
       </paper-toolbar>
       <div class="fit">
         
-        <neon-animated-pages selected="0" entry-animation="slide-from-right-animation" exit-animation="slide-left-animation">
+        <iron-pages selected="[[page]]" attr-for-selected="name">
 
-          <neon-animatable><ciclo-produccion-grado grado={{grado}}></ciclo-produccion-grado></neon-animatable>
-          <neon-animatable><ciclo-produccion-detalle gradoselec={{grado}}></ciclo-produccion-detalle></neon-animatable>
+          <ciclo-produccion-grado name="grados" grado={{grado}}></ciclo-produccion-grado>
+          <ciclo-produccion-detalle name="detalle" gradoselec={{grado}}></ciclo-produccion-detalle>
 
-        </neon-animated-pages>
+        </iron-pages>
       </div>
     </paper-header-panel>
   </template>
@@ -81,9 +87,22 @@
     Polymer({
       is: 'ciclo-produccion-app',
 
-      ready: function(){
+      properties: {
 
+        page: {
+          type: String,
+          reflectToAttribute: true
+        }
+      },
+
+      observers: [
+        '_routePageChanged(routeData.page)'
+      ],
+
+      _routePageChanged: function(page){
+        this.page = page || 'grados';
       }
+
     })
   </script>
 </dom-module>

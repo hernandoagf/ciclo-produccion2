@@ -58,8 +58,9 @@
 		      }
 			},
 
-		    ready: function(){
-
+		    attached: function(){
+		    	var id = this.data[0].id
+		    	console.log(this.data[id].name);
 		    },
 			selectgrado: function(e){
 		        var item = this.$.grado.itemForElement(e.target);
