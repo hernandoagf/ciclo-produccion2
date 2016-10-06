@@ -7,8 +7,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"2,5 - 3,0%",
 		"receta":"AE/AK/HD",
-		"rutaentrada":"B-328, J-300, F-404",
-		"rutasalida":"B-328, J-300, J-750",
+		"rutaentrada":["B-328", "J-300", "F-404"],
+		"rutasalida":["B-328", "J-300", "J-750"],
 		"col":"background-color: #EF6C00;"
 	},
 	{
@@ -19,8 +19,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"3,0 - 3,4%",
 		"receta":"AE/AZ/HA/HD/NX",
-		"rutaentrada":"B-325, J-300, F-651",
-		"rutasalida":"B-325, F-402, F-651, J-300",
+		"rutaentrada":["B-325", "J-300", "F-651"],
+		"rutasalida":["B-325", "F-402", "F-651", "J-300"],
 		"col":"background-color: #EF6C00;"
 	},
 	{
@@ -31,8 +31,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0",
 		"receta":"AJ/AK/HD",
-		"rutaentrada":"J-300, J-400, F-502, F-403, F-404, F-407, F-409, S-801, S-900, J-500, B-328",
-		"rutasalida":"F-403, F-404, F-407, F-409, F-502, J-300, J-400, J-500, S-801, S-900",
+		"rutaentrada":["J-300", "J-400", "F-502", "F-403", "F-404", "F-407", "F-409", "S-801", "S-900", "J-500", "B-328"],
+		"rutasalida":["F-403", "F-404", "F-407", "F-409", "F-502", "J-300", "J-400", "J-500", "S-801", "S-900"],
 		"col":"background-color: #9575CD;"
 	},
 	{
@@ -43,8 +43,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0,6 - 0,9%",
 		"receta":"AW/HD",
-		"rutaentrada":"J-400, F-402, F-404, F-407, F-409, F-502, J-500",
-		"rutasalida":"F-402, F-404, F-407, F-409, F-502, J-400, J-500",
+		"rutaentrada":["J-400", "F-402", "F-404", "F-407", "F-409", "F-502", "J-500"],
+		"rutasalida":["F-402", "F-404", "F-407", "F-409", "F-502", "J-400", "J-500"],
 		"col":"background-color: #9575CD;"
 	},
 	{
@@ -55,8 +55,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0,6 - 0,9%",
 		"receta":"AW/HD/SB/EC/ES",
-		"rutaentrada":"J-400, F-402, F-403, F-407, F-409, F-502, J-500",
-		"rutasalida":"B-325, F-402, F-403, F-407, F-409, F-502, J-400, J-500",
+		"rutaentrada":["J-400", "F-402", "F-403", "F-407", "F-409", "F-502", "J-500"],
+		"rutasalida":["B-325", "F-402", "F-403", "F-407", "F-409", "F-502", "J-400", "J-500"],
 		"col":"background-color: #9575CD;"
 	},
 	{
@@ -67,8 +67,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0,6 - 0,9%",
 		"receta":"AJ/AZ/HD/HA/NP",
-		"rutaentrada":"J-400, F-402, F-403, F-404, F-409, F-502, J-500",
-		"rutasalida":"F-402, F-403, F-404, F-409, F-502, J-400, J-500",
+		"rutaentrada":["J-400", "F-402", "F-403", "F-404", "F-409", "F-502", "J-500"],
+		"rutasalida":["F-402", "F-403", "F-404", "F-409", "F-502", "J-400", "J-500"],
 		"col":"background-color: #9575CD;"
 	},
 	{
@@ -79,8 +79,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0,6 - 0,9%",
 		"receta":"AJ/AZ/HD/HA/EC/ES",
-		"rutaentrada":"J-400, F-402, F-403, F-404, F-407, F-502, J-500",
-		"rutasalida":"F-402, F-403, F-404, F-407, F-502, J-400, J-500",
+		"rutaentrada":["J-400", "F-402", "F-403", "F-404", "F-407", "F-502", "J-500"],
+		"rutasalida":["F-402", "F-403", "F-404", "F-407", "F-502", "J-400", "J-500"],
 		"col":"background-color: #9575CD;"
 	},
 	{
@@ -91,8 +91,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0",
 		"receta":"AJ/AK/HD",
-		"rutaentrada":"J-400, J-500, J-600, F-402, F-403, F-404, F-407, F-409, S-801, S-900, F-600, F-605",
-		"rutasalida":"F-402, F-403, F-404, F-407, F-409, F-600, F-605, J-400, J-500, J-600, S-801, S-900",
+		"rutaentrada":["J-400", "J-500", "J-600", "F-402", "F-403", "F-404", "F-407", "F-409", "S-801", "S-900", "F-600", "F-605"],
+		"rutasalida":["F-402", "F-403", "F-404", "F-407", "F-409", "F-600", "F-605", "J-400", "J-500", "J-600", "S-801", "S-900"],
 		"col":"background-color: #9575CD;"
 	},
 	{
@@ -103,8 +103,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0",
 		"receta":"AW/HD/SW",
-		"rutaentrada":"F-605, J-500, J-600, J-700, J-705, F-502, S-701, F-651",
-		"rutasalida":"F-502, F-605, F-651, J-500, J-600, J-700, J-705",
+		"rutaentrada":["F-605", "J-500", "J-600", "J-700", "J-705", "F-502", "S-701", "F-651"],
+		"rutasalida":["F-502", "F-605", "F-651", "J-500", "J-600", "J-700", "J-705"],
 		"col":"background-color: #9575CD;"
 	},
 	{
@@ -115,8 +115,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0,6 - 0,9%",
 		"receta":"AW/HD/SB/EC/ES",
-		"rutaentrada":"J-600, J-700, F-600, J-500, J-705, S-701, F-502, F-651",
-		"rutasalida":"F-502, F-600, F-651, J-500, J-600, J-700, J-705, J-750",
+		"rutaentrada":["J-600", "J-700", "F-600", "J-500", "J-705", "S-701", "F-502", "F-651"],
+		"rutasalida":["F-502", "F-600", "F-651", "J-500", "J-600", "J-700", "J-705", "J-750"],
 		"col":"background-color: #9575CD;"
 	},
 	{
@@ -127,8 +127,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"3,0 - 3,4%",
 		"receta":"AW/HD/SW",
-		"rutaentrada":"J-700, J-750, J-758, J-858, J-859, F-600, F-605, J-500, J-600, B-328",
-		"rutasalida":"B-328, F-600, F-605, J-600, J-700, J-705, J-750, J-758",
+		"rutaentrada":["J-700", "J-750", "J-758", "J-858", "J-859", "F-600", "F-605", "J-500", "J-600", "B-328"],
+		"rutasalida":["B-328", "F-600", "F-605", "J-600", "J-700", "J-705", "J-750", "J-758"],
 		"col":"background-color: #9575CD;"
 	},
 	{
@@ -139,8 +139,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0",
 		"receta":"AE/AK/HA - AE/AZ/HA",
-		"rutaentrada":"F-402, J-400, S-801, S-900, B-328, J-302, B-325",
-		"rutasalida":"B-325, B-328, F-402, J-400, S-801, S-900",
+		"rutaentrada":["F-402", "J-400", "S-801", "S-900", "B-328", "J-302", "B-325"],
+		"rutasalida":["B-325", "B-328", "F-402", "J-400", "S-801", "S-900"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -151,8 +151,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0",
 		"receta":"AE/AK/HA - AE/AZ/HA",
-		"rutaentrada":"J-300, J-500, F-402, F-403, F-404, F-407, F-409, F-502, S-801, S-900",
-		"rutasalida":"F-402, F-403, F-404, F-407, F-409, F-502, J-300, J-500, S-801, S-900",
+		"rutaentrada":["J-300", "J-500", "F-402", "F-403", "F-404", "F-407", "F-409", "F-502", "S-801", "S-900"],
+		"rutasalida":["F-402", "F-403", "F-404", "F-407", "F-409", "F-502", "J-300", "J-500", "S-801", "S-900"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -163,8 +163,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"12,0 - 14,0%",
 		"receta":"AE/AK/HA/EC",
-		"rutaentrada":"J-600, J-700, J-442, J-846, J-744, J-844",
-		"rutasalida":"J-442, J-600, J-700, J-744 (Peróxido), J-844 (Peróxido), J-846 (Peróxido)",
+		"rutaentrada":["J-600", "J-700", "J-442", "J-846", "J-744", "J-844"],
+		"rutasalida":["J-442", "J-600", "J-700", "J-744 (Peróxido)", "J-844 (Peróxido)", "J-846 (Peróxido)"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -175,8 +175,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"5,5 - 6,5%",
 		"receta":"AE/AK/HA/EC/SB/NA - AE/AZ/HA/EC/SB/NA",
-		"rutaentrada":"J-600, J-700, J-500, J-440, J-844, J-846",
-		"rutasalida":"J-440, J-600, J-700, J-846 (Peróxido)",
+		"rutaentrada":["J-600", "J-700", "J-500", "J-440", "J-844", "J-846"],
+		"rutasalida":["J-440", "J-600", "J-700", "J-846 (Peróxido)"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -187,8 +187,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0",
 		"receta":"AE/AK/HA - AE/AZ/HA",
-		"rutaentrada":"J-400, J-600, F-402, F-403, F-404, F-407, F-409, F-502, F-600, F-605",
-		"rutasalida":"F-402, F-403, F-404, F-407, F-409, F-502, F-600, F-605, F-651, J-400, J-442, J-600, J-744, S-801 (Peróxido)",
+		"rutaentrada":["J-400", "J-600", "F-402", "F-403", "F-404", "F-407", "F-409", "F-502", "F-600", "F-605"],
+		"rutasalida":["F-402", "F-403", "F-404", "F-407", "F-409", "F-502", "F-600", "F-605", "F-651", "J-400", "J-442", "J-600", "J-744", "S-801 (Peróxido)"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -199,8 +199,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0",
 		"receta":"AE/AK/HA - AE/AZ/HA",
-		"rutaentrada":"J-442, J-500, J-700, F-502, F-600, F-651, S-701, F-605, J-705, J-440, J-744, S-900",
-		"rutasalida":"F-502, F-600, F-605, F-651, J-440, J-442, J-500, J-700, J-705",
+		"rutaentrada":["J-442", "J-500", "J-700", "F-502", "F-600", "F-651", "S-701", "F-605", "J-705", "J-440", "J-744", "S-900"],
+		"rutasalida":["F-502", "F-600", "F-605", "F-651", "J-440", "J-442", "J-500", "J-700", "J-705"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -211,8 +211,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0",
 		"receta":"AE/AK/HA - AE/AZ/HA",
-		"rutaentrada":"J-600, J-750, J-758, J-800, J-808, F-600, F-651, S-701, J-442, J-705, F-605, J-440, J-858, J-859, J-846, J-744",
-		"rutasalida":"F-600, F-605, F-651, J-440, J-442, J-600, J-705, J-750, J-758, J-800, J-808, J-901 (Peróxido), S-701",
+		"rutaentrada":["J-600", "J-750", "J-758", "J-800", "J-808", "F-600", "F-651", "S-701", "J-442", "J-705", "F-605", "J-440", "J-858", "J-859", "J-846", "J-744"],
+		"rutasalida":["F-600", "F-605", "F-651", "J-440", "J-442", "J-600", "J-705", "J-750", "J-758", "J-800", "J-808", "J-901 (Peróxido)", "S-701"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -223,8 +223,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0",
 		"receta":"AE/AK/HA/EC/NA",
-		"rutaentrada":"J-600, J-700, J-800, J-808, S-701, J-750, J-758, F-600, F-605, F-651, J-858, J-859, J-905",
-		"rutasalida":"F-600, F-605, J-600, J-700, J-750, J-758, J-800, J-808, J-901 (Peróxido), J-905 (Peróxido), S-701",
+		"rutaentrada":["J-600", "J-700", "J-800", "J-808", "S-701", "J-750", "J-758", "F-600", "F-605", "F-651", "J-858", "J-859", "J-905"],
+		"rutasalida":["F-600", "F-605", "J-600", "J-700", "J-750", "J-758", "J-800", "J-808", "J-901 (Peróxido)", "J-905 (Peróxido)", "S-701"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -235,8 +235,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"12,0 - 14,0%",
 		"receta":"AE/AZ/HA/EC",
-		"rutaentrada":"J-844, J-440, J-846, J-500",
-		"rutasalida":"J-440, J-600, J-700, J-700 (Reactor), J-800, J-844, J-846 (Peróxido)",
+		"rutaentrada":["J-844", "J-440", "J-846", "J-500"],
+		"rutasalida":["J-440", "J-600", "J-700", "J-700 (Reactor)", "J-800", "J-844", "J-846 (Peróxido)"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -247,8 +247,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"2,5 - 3,0%",
 		"receta":"AE/AK/HA/EC - AE/AZ/HA/EC",
-		"rutaentrada":"F-651, J-700, J-758, J-858, J-859, J-705, J-800, J-808, F-605, B-325",
-		"rutasalida":"F-651, J-700, J-705, J-758, J-800, J-808",
+		"rutaentrada":["F-651", "J-700", "J-758", "J-858", "J-859", "J-705", "J-800", "J-808", "F-605", "B-325"],
+		"rutasalida":["F-651", "J-700", "J-705", "J-758", "J-800", "J-808"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -259,8 +259,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"3,0 - 3,4%",
 		"receta":"AE/AZ/HA/NZ/EC",
-		"rutaentrada":"F-651, J-700, J-750, J-858, J-705, J-800, J-808, J-859",
-		"rutasalida":"F-651, J-700, J-705, J-750, J-800, J-808",
+		"rutaentrada":["F-651", "J-700", "J-750", "J-858", "J-705", "J-800", "J-808", "J-859"],
+		"rutasalida":["F-651", "J-700", "J-705", "J-750", "J-800", "J-808"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -271,8 +271,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0",
 		"receta":"AE/AK/HA - AE/AZ/HA",
-		"rutaentrada":"J-700, J-808, J-901, J-905, J-705, S-701, J-750, J-758, J-858, J-859, J-643, J-744, J-844, J-846",
-		"rutasalida":"J-700, J-705, J-750, J-758, J-808, J-901, J-905, S-701, S-900",
+		"rutaentrada":["J-700", "J-808", "J-901", "J-905", "J-705", "S-701", "J-750", "J-758", "J-858", "J-859", "J-643", "J-744", "J-844", "J-846"],
+		"rutasalida":["J-700", "J-705", "J-750", "J-758", "J-808", "J-901", "J-905", "S-701", "S-900"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -283,8 +283,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0,6 - 0,9%",
 		"receta":"AE/AZ/HA/EC/NZ",
-		"rutaentrada":"J-700, J-800, J-901, J-905, J-705, S-701, J-750, J-758, J-858, J-859",
-		"rutasalida":"J-700, J-705, J-750, J-758, J-800, J-901, J-905",
+		"rutaentrada":["J-700", "J-800", "J-901", "J-905", "J-705", "S-701", "J-750", "J-758", "J-858", "J-859"],
+		"rutasalida":["J-700", "J-705", "J-750", "J-758", "J-800", "J-901", "J-905"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -295,8 +295,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"12,0 - 14,0%",
 		"receta":"AE/AK/HA",
-		"rutaentrada":"J-744, J-846, J-440",
-		"rutasalida":"J-440, J-442, J-744 (Peróxido), J-800, J-846 (Peróxido), J-846 (Reactor), J-901, J-905",
+		"rutaentrada":["J-744", "J-846", "J-440"],
+		"rutasalida":["J-440", "J-442", "J-744 (Peróxido)", "J-800", "J-846 (Peróxido)", "J-846 (Reactor)", "J-901", "J-905"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -307,8 +307,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"12,0 - 14,0%",
 		"receta":"AE/AK/HA/NA/EC",
-		"rutaentrada":"J-844, J-440, J-744, J-442",
-		"rutasalida":"J-440, J-442, J-700, J-744 (Peróxido), J-800, J-844 (Peróxido), J-901 (Peróxido), J-901 (Reactor), J-905 (Peróxido), J-905 (Reactor)",
+		"rutaentrada":["J-844", "J-440", "J-744", "J-442"],
+		"rutasalida":["J-440", "J-442", "J-700", "J-744 (Peróxido)", "J-800", "J-844 (Peróxido)", "J-901 (Peróxido)", "J-901 (Reactor)", "J-905 (Peróxido)", "J-905 (Reactor)"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -319,8 +319,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0",
 		"receta":"AE/AK/HA - AE/AZ/HA",
-		"rutaentrada":"J-800, J-808, J-905, J-844, J-846, J-700, J-705, S-900",
-		"rutasalida":"J-800, J-808, J-905",
+		"rutaentrada":["J-800", "J-808", "J-905", "J-844", "J-846", "J-700", "J-705", "S-900"],
+		"rutasalida":["J-800", "J-808", "J-905"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -331,8 +331,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0",
 		"receta":"AE/AK/HD/HA/EC - AE/AZ/HD/HA/EC",
-		"rutaentrada":"J-800, J-808, J-901, J-844, J-846, J-705",
-		"rutasalida":"J-705, J-800, J-808, J-901, S-701",
+		"rutaentrada":["J-800", "J-808", "J-901", "J-844", "J-846", "J-705"],
+		"rutasalida":["J-705", "J-800", "J-808", "J-901", "S-701"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -343,8 +343,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0",
 		"receta":"AE/AZ/HA",
-		"rutaentrada":"J-700, J-705, J-905, J-800",
-		"rutasalida":"F-600, F-605, J-600, J-700, J-705, J-800, J-808",
+		"rutaentrada":["J-700", "J-705", "J-905", "J-800"],
+		"rutasalida":["F-600", "F-605", "J-600", "J-700", "J-705", "J-800", "J-808"],
 		"col":"background-color: #0097A7;"
 	},
 	{
@@ -355,8 +355,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0",
 		"receta":"AE/AK/HA/DW",
-		"rutaentrada":"J-300, J-400, F-402, S-900, J-302, F-502, J-500",
-		"rutasalida":"F-402, F-502, J-300, J-400, S-900",
+		"rutaentrada":["J-300", "J-400", "F-402", "S-900", "J-302", "F-502", "J-500"],
+		"rutasalida":["F-402", "F-502", "J-300", "J-400", "S-900"],
 		"col":"background-color: #0097A7;"
 	},
 	{
@@ -367,8 +367,8 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0",
 		"receta":"AE/AK/HA/DW",
-		"rutaentrada":"J-300, J-400, F-402, S-801, F-502, J-800",
-		"rutasalida":"F-402, F-502, J-300, J-400, J-600, J-901, S-801",
+		"rutaentrada":["J-300", "J-400", "F-402", "S-801", "F-502", "J-800"],
+		"rutasalida":["F-402", "F-502", "J-300", "J-400", "J-600", "J-901", "S-801"],
 		"col":"background-color: #0097A7;"
 	}
 ]
