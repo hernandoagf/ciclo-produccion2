@@ -1,8 +1,194 @@
-[
-	{
-		"id":0,
-		"name":"B325",
-		"title":"B-325",
+{
+	"Grados": [
+		{
+			"name":"B325",
+			"title":"B-325",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #EF6C00;"
+
+		},
+		{
+			"name":"B328",
+			"title":"B-328",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #EF6C00;"
+		},
+		{
+			"name":"F402",
+			"title":"F-402",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #9575CD;"
+		},
+		{
+			"name":"F403",
+			"title":"F-403",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #9575CD;"
+		},
+		{
+			"name":"F404",
+			"title":"F-404",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #9575CD;"
+		},
+		{
+			"name":"F407",
+			"title":"F-407",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #9575CD;"
+		},
+		{
+			"name":"F409",
+			"title":"F-409",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #9575CD;"
+		},
+		{
+			"name":"F502",
+			"title":"F-502",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #9575CD;"
+		},
+		{
+			"name":"F600",
+			"title":"F-600",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #9575CD;"
+		},
+		{
+			"name":"F605",
+			"title":"F-605",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #9575CD;"
+		},
+		{
+			"name":"F651",
+			"title":"F-651",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #9575CD;"
+		},
+		{
+			"name":"J300",
+			"title":"J-300",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #689F38;"
+		},
+		{
+			"name":"J400",
+			"title":"J-400",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #689F38;"
+		},
+		{
+			"name":"J440",
+			"title":"J-440",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #689F38;"
+		},
+		{
+			"name":"J442",
+			"title":"J-442",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #689F38;"
+		},
+		{
+			"name":"J500",
+			"title":"J-500",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #689F38;"
+		},
+		{
+			"name":"J600",
+			"title":"J-600",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #689F38;"
+		},
+		{
+			"name":"J700",
+			"title":"J-700",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #689F38;"
+		},
+		{
+			"name":"J705",
+			"title":"J-705",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #689F38;"
+		},
+		{
+			"name":"J744",
+			"title":"J-744",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #689F38;"
+		},
+		{
+			"name":"J750",
+			"title":"J-750",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #689F38;"
+		},
+		{
+			"name":"J758",
+			"title":"J-758",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #689F38;"
+		},
+		{
+			"name":"J800",
+			"title":"J-800",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #689F38;"
+		},
+		{
+			"name":"J808",
+			"title":"J-808",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #689F38;"
+		},
+		{
+			"name":"J844",
+			"title":"J-844",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #689F38;"
+		},
+		{
+			"name":"J846",
+			"title":"J-846",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #689F38;"
+		},
+		{
+			"name":"J901",
+			"title":"J-901",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #689F38;"
+		},
+		{
+			"name":"J905",
+			"title":"J905",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #689F38;"
+		},
+		{
+			"name":"S701",
+			"title":"S-701",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #0097A7;"
+		},
+		{
+			"name":"S801",
+			"title":"S-801",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #0097A7;"
+		},
+		{
+			"name":"S900",
+			"title":"S-900",
+			"img":"../../images/refinery.jpg",
+			"col":"background-color: #0097A7;"
+		}
+	],
+	"B325": {
 		"rangoif":"1,1 - 1,4 - 1,7",
 		"img":"../../images/refinery.jpg",
 		"etileno":"2,5 - 3,0%",
@@ -11,8 +197,7 @@
 		"rutasalida":["B-328", "J-300", "J-750"],
 		"col":"background-color: #EF6C00;"
 	},
-	{
-		"id":1,
+	"B328": {
 		"name":"B328",
 		"title":"B-328",
 		"rangoif":"1,1 - 1,4 - 1,7",
@@ -23,8 +208,7 @@
 		"rutasalida":["B-325", "F-402", "F-651", "J-300"],
 		"col":"background-color: #EF6C00;"
 	},
-	{
-		"id":2,
+	"F402": {
 		"name":"F402",
 		"title":"F-402",
 		"rangoif":"2,4 - 2,7 - 3,0",
@@ -35,8 +219,7 @@
 		"rutasalida":["F-403", "F-404", "F-407", "F-409", "F-502", "J-300", "J-400", "J-500", "S-801", "S-900"],
 		"col":"background-color: #9575CD;"
 	},
-	{
-		"id":3,
+	"F403": {
 		"name":"F403",
 		"title":"F-403",
 		"rangoif":"2,7 - 3,0 - 3,3",
@@ -47,8 +230,7 @@
 		"rutasalida":["F-402", "F-404", "F-407", "F-409", "F-502", "J-400", "J-500"],
 		"col":"background-color: #9575CD;"
 	},
-	{
-		"id":4,
+	"F404": {
 		"name":"F404",
 		"title":"F-404",
 		"rangoif":"2,7 - 3,0 - 3,3",
@@ -59,8 +241,7 @@
 		"rutasalida":["B-325", "F-402", "F-403", "F-407", "F-409", "F-502", "J-400", "J-500"],
 		"col":"background-color: #9575CD;"
 	},
-	{
-		"id":5,
+	"F407": {
 		"name":"F407",
 		"title":"F-407",
 		"rangoif":"2,7 - 3,0 - 3,3",
@@ -71,8 +252,7 @@
 		"rutasalida":["F-402", "F-403", "F-404", "F-409", "F-502", "J-400", "J-500"],
 		"col":"background-color: #9575CD;"
 	},
-	{
-		"id":6,
+	"F409":{
 		"name":"F409",
 		"title":"F-409",
 		"rangoif":"2,7 - 3,0 - 3,3",
@@ -83,8 +263,7 @@
 		"rutasalida":["F-402", "F-403", "F-404", "F-407", "F-502", "J-400", "J-500"],
 		"col":"background-color: #9575CD;"
 	},
-	{
-		"id":7,
+	"F502": {
 		"name":"F502",
 		"title":"F-502",
 		"rangoif":"3,4 - 3,8 - 4,1",
@@ -95,8 +274,7 @@
 		"rutasalida":["F-402", "F-403", "F-404", "F-407", "F-409", "F-600", "F-605", "J-400", "J-500", "J-600", "S-801", "S-900"],
 		"col":"background-color: #9575CD;"
 	},
-	{
-		"id":8,
+	"F600": {
 		"name":"F600",
 		"title":"F-600",
 		"rangoif":"6,4 - 8,0 - 9,6",
@@ -107,8 +285,7 @@
 		"rutasalida":["F-502", "F-605", "F-651", "J-500", "J-600", "J-700", "J-705"],
 		"col":"background-color: #9575CD;"
 	},
-	{
-		"id":9,
+	"F605": {
 		"name":"F605",
 		"title":"F-605",
 		"rangoif":"6,8 - 8,0 - 9,2",
@@ -119,8 +296,7 @@
 		"rutasalida":["F-502", "F-600", "F-651", "J-500", "J-600", "J-700", "J-705", "J-750"],
 		"col":"background-color: #9575CD;"
 	},
-	{
-		"id":10,
+	"F651": {
 		"name":"F651",
 		"title":"F-651",
 		"rangoif":"6,3 - 7,0 - 7,7",
@@ -131,8 +307,7 @@
 		"rutasalida":["B-328", "F-600", "F-605", "J-600", "J-700", "J-705", "J-750", "J-758"],
 		"col":"background-color: #9575CD;"
 	},
-	{
-		"id":11,
+	"J300": {
 		"name":"J300",
 		"title":"J-300",
 		"rangoif":"1,1 - 1,4 - 1,7",
@@ -143,8 +318,7 @@
 		"rutasalida":["B-325", "B-328", "F-402", "J-400", "S-801", "S-900"],
 		"col":"background-color: #689F38;"
 	},
-	{
-		"id":12,
+	"J400": {
 		"name":"J400",
 		"title":"J-400",
 		"rangoif":"2,4 - 3,0 - 3,6",
@@ -155,8 +329,7 @@
 		"rutasalida":["F-402", "F-403", "F-404", "F-407", "F-409", "F-502", "J-300", "J-500", "S-801", "S-900"],
 		"col":"background-color: #689F38;"
 	},
-	{
-		"id":13,
+	"J440": {
 		"name":"J440",
 		"title":"J-440",
 		"rangoif":"4,0 - 5,0 - 6,0",
@@ -167,8 +340,7 @@
 		"rutasalida":["J-442", "J-600", "J-700", "J-744 (Peróxido)", "J-844 (Peróxido)", "J-846 (Peróxido)"],
 		"col":"background-color: #689F38;"
 	},
-	{
-		"id":14,
+	"J442": {
 		"name":"J442",
 		"title":"J-442",
 		"rangoif":"5,5 - 6,5 - 7,5",
@@ -179,8 +351,7 @@
 		"rutasalida":["J-440", "J-600", "J-700", "J-846 (Peróxido)"],
 		"col":"background-color: #689F38;"
 	},
-	{
-		"id":15,
+	"J500": {
 		"name":"J500",
 		"title":"J-500",
 		"rangoif":"4,0 - 5,0 - 6,0",
@@ -191,8 +362,7 @@
 		"rutasalida":["F-402", "F-403", "F-404", "F-407", "F-409", "F-502", "F-600", "F-605", "F-651", "J-400", "J-442", "J-600", "J-744", "S-801 (Peróxido)"],
 		"col":"background-color: #689F38;"
 	},
-	{
-		"id":16,
+	"J600": {
 		"name":"J600",
 		"title":"J-600",
 		"rangoif":"5,6 - 7,0 - 8,4",
@@ -203,8 +373,7 @@
 		"rutasalida":["F-502", "F-600", "F-605", "F-651", "J-440", "J-442", "J-500", "J-700", "J-705"],
 		"col":"background-color: #689F38;"
 	},
-	{
-		"id":17,
+	"J700": {
 		"name":"J700",
 		"title":"J-700",
 		"rangoif":"8,8 - 11,0 - 13,2",
@@ -215,8 +384,7 @@
 		"rutasalida":["F-600", "F-605", "F-651", "J-440", "J-442", "J-600", "J-705", "J-750", "J-758", "J-800", "J-808", "J-901 (Peróxido)", "S-701"],
 		"col":"background-color: #689F38;"
 	},
-	{
-		"id":18,
+	"J705": {
 		"name":"J705",
 		"title":"J-705",
 		"rangoif":"12,0 - 15,0 - 18,0",
@@ -227,8 +395,7 @@
 		"rutasalida":["F-600", "F-605", "J-600", "J-700", "J-750", "J-758", "J-800", "J-808", "J-901 (Peróxido)", "J-905 (Peróxido)", "S-701"],
 		"col":"background-color: #689F38;"
 	},
-	{
-		"id":19,
+	"J744": {
 		"name":"J744",
 		"title":"J-744",
 		"rangoif":"14,4 - 18,0 - 21,6",
@@ -239,8 +406,7 @@
 		"rutasalida":["J-440", "J-600", "J-700", "J-700 (Reactor)", "J-800", "J-844", "J-846 (Peróxido)"],
 		"col":"background-color: #689F38;"
 	},
-	{
-		"id":20,
+	"J750": {
 		"name":"J750",
 		"title":"J-750",
 		"rangoif":"8,8 - 11,0 - 13,2",
@@ -251,8 +417,7 @@
 		"rutasalida":["F-651", "J-700", "J-705", "J-758", "J-800", "J-808"],
 		"col":"background-color: #689F38;"
 	},
-	{
-		"id":21,
+	"J758": {
 		"name":"J758",
 		"title":"J-758",
 		"rangoif":"9,4 - 11,0 - 12,6",
@@ -263,8 +428,7 @@
 		"rutasalida":["F-651", "J-700", "J-705", "J-750", "J-800", "J-808"],
 		"col":"background-color: #689F38;"
 	},
-	{
-		"id":22,
+	"J800": {
 		"name":"J800",
 		"title":"J-800",
 		"rangoif":"17,6 - 22,0 - 26,4",
@@ -275,8 +439,7 @@
 		"rutasalida":["J-700", "J-705", "J-750", "J-758", "J-808", "J-901", "J-905", "S-701", "S-900"],
 		"col":"background-color: #689F38;"
 	},
-	{
-		"id":23,
+	"J808": {
 		"name":"J808",
 		"title":"J-808",
 		"rangoif":"17,6 - 22,0 - 26,4",
@@ -287,8 +450,7 @@
 		"rutasalida":["J-700", "J-705", "J-750", "J-758", "J-800", "J-901", "J-905"],
 		"col":"background-color: #689F38;"
 	},
-	{
-		"id":24,
+	"J844": {
 		"name":"J844",
 		"title":"J-844",
 		"rangoif":"24,0 - 30,0 - 36,0",
@@ -299,8 +461,7 @@
 		"rutasalida":["J-440", "J-442", "J-744 (Peróxido)", "J-800", "J-846 (Peróxido)", "J-846 (Reactor)", "J-901", "J-905"],
 		"col":"background-color: #689F38;"
 	},
-	{
-		"id":25,
+	"J846": {
 		"name":"J846",
 		"title":"J-846",
 		"rangoif":"38,0 - 42,0 - 46,0",
@@ -311,8 +472,7 @@
 		"rutasalida":["J-440", "J-442", "J-700", "J-744 (Peróxido)", "J-800", "J-844 (Peróxido)", "J-901 (Peróxido)", "J-901 (Reactor)", "J-905 (Peróxido)", "J-905 (Reactor)"],
 		"col":"background-color: #689F38;"
 	},
-	{
-		"id":26,
+	"J901": {
 		"name":"J901",
 		"title":"J-901",
 		"rangoif":"32,0 - 40,0 - 48,0",
@@ -323,8 +483,7 @@
 		"rutasalida":["J-800", "J-808", "J-905"],
 		"col":"background-color: #689F38;"
 	},
-	{
-		"id":27,
+	"J905": {
 		"name":"J905",
 		"title":"J-905",
 		"rangoif":"38,0 - 42,0 - 46,0",
@@ -335,8 +494,7 @@
 		"rutasalida":["J-705", "J-800", "J-808", "J-901", "S-701"],
 		"col":"background-color: #689F38;"
 	},
-	{
-		"id":28,
+	"S701": {
 		"name":"S701",
 		"title":"S-701",
 		"rangoif":"10,8 - 12,0 - 13,2",
@@ -347,8 +505,7 @@
 		"rutasalida":["F-600", "F-605", "J-600", "J-700", "J-705", "J-800", "J-808"],
 		"col":"background-color: #0097A7;"
 	},
-	{
-		"id":29,
+	"S801": {
 		"name":"S801",
 		"title":"S-801",
 		"rangoif":"17,0 - 20,0 - 23,0",
@@ -359,8 +516,7 @@
 		"rutasalida":["F-402", "F-502", "J-300", "J-400", "S-900"],
 		"col":"background-color: #0097A7;"
 	},
-	{
-		"id":30,
+	"S900": {
 		"name":"S900",
 		"title":"S-900",
 		"rangoif":"32,0 - 35,0 - 38,0",
@@ -371,4 +527,4 @@
 		"rutasalida":["F-402", "F-502", "J-300", "J-400", "J-600", "J-901", "S-801"],
 		"col":"background-color: #0097A7;"
 	}
-]
+}
