@@ -1,6 +1,8 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/app-route/app-route.html">
 <link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="ciclo-produccion-listagrado.html">
 
 <dom-module id="ciclo-produccion-detalle">
 	<template>
@@ -84,6 +86,14 @@
 			}
 		</style>
 
+	    <app-route
+	        route="[[route]]"
+	        pattern="/:item"
+	        data="{{routeData}}"></app-route>
+
+
+		<ciclo-produccion-listagrado data="{{data}}" gradoselec="[[gradoselec]]"></ciclo-produccion-listagrado>
+
 		<div id="grado_detalle" class="container layout horizontal">
 
 			<paper-card id="leftpanel" style="[[gradoselec.col]]" image="[[gradoselec.img]]" elevation="0">
@@ -147,28 +157,46 @@
 			is: "ciclo-produccion-detalle",
 
 			properties: {
-		      gradoselec: {
-		      	type: Object,
-		      	observer: 'gradoselecChanged'
-		      }
+
+				item: Object,
+
+		        route: {
+		        	type: Object,
+		        	observer: '_routeChanged'
+		        },
+
+		        routeData: Object,
+
+				gradoselec: Object,
+
 		    },
 
 		    ready: function(){
 
 		    },
+
 		    attached: function(){
-		    	
-		    },
-		    gradoselecChanged: function(){
+		    	console.log(this.routeData.item);
+		    	console.log(this.route);
+		    	console.log(this.data);
 		    	console.log(this.gradoselec);
-		    	var routein = this.gradoselec.rutaentrada;
-		    	console.log(routein);
 		    },
+
+		    _routeChanged: function(){
+				for (var i = this.data.length - 1; i >= 0; i--) {
+					if (this.data[i].name == this.routeData.item) {
+						this.gradoselec = this.data[i];
+						console.log(this.gradoselec);
+					}
+				}
+		    },
+
 		    backtolist: function(){
 		    	var pages = document.querySelector('iron-pages');
 		    	pages.select(0);
 		    	this.changetoolbarback();
 		    },
+
 		    changetoolbarback: function(){
 		    	document.getElementById("toolbar").style.backgroundColor = "#d32f2f";
 				document.getElementById("toolbar").style.color = "white";

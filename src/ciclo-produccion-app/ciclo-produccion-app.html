@@ -1,5 +1,7 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/iron-flex-layout/classes/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/app-route/app-route.html">
+<link rel="import" href="../../bower_components/app-route/app-location.html">
 <link rel="import" href="../../bower_components/paper-styles/color.html">
 <link rel="import" href="../../bower_components/paper-styles/typography.html">
 <link rel="import" href="../../bower_components/paper-toolbar/paper-toolbar.html">
@@ -12,6 +14,7 @@
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-grado.html">
 <link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-detalle.html">
+<link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-listagrado.html">
 
 
 <dom-module id="ciclo-produccion-app">
@@ -57,6 +60,16 @@
       }
     </style>
 
+    <app-location route="{{route}}"></app-location>
+
+    <app-route
+      route="{{route}}"
+      pattern="/:page"
+      data="{{routeData}}"
+      tail="{{subroute}}"></app-route>
+
+    <ciclo-produccion-listagrado route="{{subroute}}"></ciclo-produccion-listagrado>
+
     <!-- paper-header-panel must have an explicit height -->
     <paper-header-panel class="flex">
       <paper-toolbar id="toolbar">
@@ -64,10 +77,10 @@
       </paper-toolbar>
       <div class="fit">
         
-        <iron-pages selected="0">
+        <iron-pages selected="[[routeData.page]]" attr-for-selected="name">
 
-          <ciclo-produccion-grado grado={{grado}}></ciclo-produccion-grado>
-          <ciclo-produccion-detalle gradoselec={{grado}}></ciclo-produccion-detalle>
+          <ciclo-produccion-grado name="lista" grado={{grado}}></ciclo-produccion-grado>
+          <ciclo-produccion-detalle name="grado" route="[[subroute]]" gradoselec={{grado}}></ciclo-produccion-detalle>
 
         </iron-pages>
       </div>
@@ -76,7 +89,15 @@
 
   <script>
     Polymer({
-      is: 'ciclo-produccion-app'
+      is: 'ciclo-produccion-app',
+
+      ready: function(){
+        /*console.log(this.route);
+        console.log(this.route.path);
+        console.log(this.routeData);
+        console.log(this.routeData.gradoprueba);
+        console.log(this.subroute);*/
+      }
 
     })
   </script>

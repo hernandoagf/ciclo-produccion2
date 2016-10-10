@@ -1,0 +1,65 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/app-route/app-route.html">
+<link rel="import" href="../../bower_components/app-route/app-location.html">
+
+<dom-module id="ciclo-produccion-listagrado">
+	<template>
+
+	<app-route
+		route="[[route]]"
+		pattern="/:gradoroute"
+		data="{{routeData}}"></app-route>
+		
+		<iron-ajax
+          auto
+          url="../../data/inyeccion_homo.json"
+          last-response="{{data}}"
+          handle-as="json">
+        </iron-ajax>
+
+	</template>
+	<script>
+		Polymer ({
+			is: 'ciclo-produccion-listagrado',
+
+			properties: {
+				data: {
+					type: Object,
+					notify: true,
+					observer: '_dataChanged'
+				},
+				gradoselec: {
+					type: Object,
+					notify: true,
+					reflectToAttribute: true
+				},
+				route: Object,
+
+				testvar: {
+					type: Number,
+					notify: true,
+					observer: '_testvarChanged'
+				}
+			},
+
+			attached: function(){
+				//console.log(this.route);
+				//console.log(this.routeData);
+			},
+
+			_dataChanged: function(){
+				//console.log("Hola mundo");
+				for (var i = this.data.length - 1; i >= 0; i--) {
+					if (this.data[i].name == this.routeData.gradoroute) {
+						this.gradoselec = this.data[i];
+						console.log(this.gradoselec);
+					}
+				}
+			},
+
+			_testvarChanged: function(){
+				console.log(this.testvar);
+			}
+		})
+	</script>
+</dom-module>

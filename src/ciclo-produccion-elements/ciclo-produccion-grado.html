@@ -3,6 +3,7 @@
 <link rel="import" href="../../bower_components/paper-styles/typography.html">
 <link rel="import" href="../../bower_components/app-layout/app-grid/app-grid-style.html">
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="ciclo-produccion-listagrado.html">
 
 <dom-module id="ciclo-produccion-grado">
 	<template>
@@ -23,24 +24,22 @@
 			    color: white;
 			    text-align: left;
 		    }
+		    a{
+		    	color: white;
+		    }
 		    .grado-header{ @apply(--paper-font-title); }
 		</style>
 
-		<iron-ajax
-          auto
-          url="../../data/inyeccion_homo.json"
-          last-response="{{data}}"
-          handle-as="json">
-        </iron-ajax>
+		<ciclo-produccion-listagrado data="{{data}}" testvar="{{testing}}"></ciclo-produccion-listagrado>
 
         <div class="app-grid" has-aspect-ratio>
             <template is="dom-repeat" id="grado" items="[[data]]">
               <div class="item">
-                <paper-card image="../../images/refinery.jpg" style="[[item.col]]" on-tap="selectgrado">
+                <a href="[[item.link]]"><paper-card image="../../images/refinery.jpg" style="[[item.col]]">
                   <div class="card-content">
                     <div class="grado-header">[[item.title]]</div>
                   </div>
-                </paper-card>
+                </paper-card></a>
               </div>
             </template>
             <array-selector id="selector" items="{{data}}" selected="{{selected}}"></array-selector>
@@ -58,13 +57,12 @@
 		      }
 			},
 
-		    attached: function(){
-		    	var id = this.data[0].id
-		    	console.log(this.data[id].name);
-		    },
+			ready: function(){
+				this.testing = 6;
+			},
+
 			selectgrado: function(e){
 		        var item = this.$.grado.itemForElement(e.target);
-		        this.$.selector.select(item);
 		        this.grado = item;
 
 		        var pages = document.querySelector('iron-pages');
