@@ -4,7 +4,6 @@
 		"title":"B-325",
 		"rangoif":"1,1 - 1,4 - 1,7",
 		"img":"../../images/refinery.jpg",
-		"link":"/grado/B325",
 		"etileno":"2,5 - 3,0%",
 		"receta":"AE/AK/HD",
 		"rutaentrada":["B-328", "J-300", "F-404"],
@@ -128,7 +127,7 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0",
 		"receta":"AE/AK/HA - AE/AZ/HA",
-		"rutaentrada":["F-402", "J-400", "S-801", "S-900", "B-328", "J-302", "B-325"],
+		"rutaentrada":["F-402", "J-400", "S-801", "S-900", "B-328", "B-325"],
 		"rutasalida":["B-325", "B-328", "F-402", "J-400", "S-801", "S-900"],
 		"col":"background-color: #689F38;"
 	},
@@ -151,7 +150,7 @@
 		"etileno":"12,0 - 14,0%",
 		"receta":"AE/AK/HA/EC",
 		"rutaentrada":["J-600", "J-700", "J-442", "J-846", "J-744", "J-844"],
-		"rutasalida":["J-442", "J-600", "J-700", "J-744 (Peróxido)", "J-844 (Peróxido)", "J-846 (Peróxido)"],
+		"rutasalida":["J-442", "J-600", "J-700", "J-744 Peróxido", "J-844 Peróxido", "J-846 Peróxido"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -162,7 +161,7 @@
 		"etileno":"5,5 - 6,5%",
 		"receta":"AE/AK/HA/EC/SB/NA - AE/AZ/HA/EC/SB/NA",
 		"rutaentrada":["J-600", "J-700", "J-500", "J-440", "J-844", "J-846"],
-		"rutasalida":["J-440", "J-600", "J-700", "J-846 (Peróxido)"],
+		"rutasalida":["J-440", "J-600", "J-700", "J-846 Peróxido"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -173,7 +172,7 @@
 		"etileno":"0",
 		"receta":"AE/AK/HA - AE/AZ/HA",
 		"rutaentrada":["J-400", "J-600", "F-402", "F-403", "F-404", "F-407", "F-409", "F-502", "F-600", "F-605"],
-		"rutasalida":["F-402", "F-403", "F-404", "F-407", "F-409", "F-502", "F-600", "F-605", "F-651", "J-400", "J-442", "J-600", "J-744", "S-801 (Peróxido)"],
+		"rutasalida":["F-402", "F-403", "F-404", "F-407", "F-409", "F-502", "F-600", "F-605", "F-651", "J-400", "J-442", "J-600", "J-744", "S-801 Peróxido"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -195,7 +194,7 @@
 		"etileno":"0",
 		"receta":"AE/AK/HA - AE/AZ/HA",
 		"rutaentrada":["J-600", "J-750", "J-758", "J-800", "J-808", "F-600", "F-651", "S-701", "J-442", "J-705", "F-605", "J-440", "J-858", "J-859", "J-846", "J-744"],
-		"rutasalida":["F-600", "F-605", "F-651", "J-440", "J-442", "J-600", "J-705", "J-750", "J-758", "J-800", "J-808", "J-901 (Peróxido)", "S-701"],
+		"rutasalida":["F-600", "F-605", "F-651", "J-440", "J-442", "J-600", "J-705", "J-750", "J-758", "J-800", "J-808", "J-901 Peróxido", "S-701"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -206,7 +205,7 @@
 		"etileno":"0",
 		"receta":"AE/AK/HA/EC/NA",
 		"rutaentrada":["J-600", "J-700", "J-800", "J-808", "S-701", "J-750", "J-758", "F-600", "F-605", "F-651", "J-858", "J-859", "J-905"],
-		"rutasalida":["F-600", "F-605", "J-600", "J-700", "J-750", "J-758", "J-800", "J-808", "J-901 (Peróxido)", "J-905 (Peróxido)", "S-701"],
+		"rutasalida":["F-600", "F-605", "J-600", "J-700", "J-750", "J-758", "J-800", "J-808", "J-901 Peróxido", "J-905 Peróxido", "S-701"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -217,7 +216,7 @@
 		"etileno":"12,0 - 14,0%",
 		"receta":"AE/AZ/HA/EC",
 		"rutaentrada":["J-844", "J-440", "J-846", "J-500"],
-		"rutasalida":["J-440", "J-600", "J-700", "J-700 (Reactor)", "J-800", "J-844", "J-846 (Peróxido)"],
+		"rutasalida":["J-440", "J-600", "J-700", "J-700", "J-800", "J-844", "J-846 Peróxido"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -272,7 +271,7 @@
 		"etileno":"12,0 - 14,0%",
 		"receta":"AE/AK/HA",
 		"rutaentrada":["J-744", "J-846", "J-440"],
-		"rutasalida":["J-440", "J-442", "J-744 (Peróxido)", "J-800", "J-846 (Peróxido)", "J-846 (Reactor)", "J-901", "J-905"],
+		"rutasalida":["J-440", "J-442", "J-744 Peróxido", "J-800", "J-846 Peróxido", "J-846", "J-901", "J-905"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -283,7 +282,7 @@
 		"etileno":"12,0 - 14,0%",
 		"receta":"AE/AK/HA/NA/EC",
 		"rutaentrada":["J-844", "J-440", "J-744", "J-442"],
-		"rutasalida":["J-440", "J-442", "J-700", "J-744 (Peróxido)", "J-800", "J-844 (Peróxido)", "J-901 (Peróxido)", "J-901 (Reactor)", "J-905 (Peróxido)", "J-905 (Reactor)"],
+		"rutasalida":["J-440", "J-442", "J-700", "J-744 Peróxido", "J-800", "J-844 Peróxido", "J-901 Peróxido", "J-901", "J-905 Peróxido", "J-905"],
 		"col":"background-color: #689F38;"
 	},
 	{
@@ -326,7 +325,7 @@
 		"img":"../../images/refinery.jpg",
 		"etileno":"0",
 		"receta":"AE/AK/HA/DW",
-		"rutaentrada":["J-300", "J-400", "F-402", "S-900", "J-302", "F-502", "J-500"],
+		"rutaentrada":["J-300", "J-400", "F-402", "S-900", "F-502", "J-500"],
 		"rutasalida":["F-402", "F-502", "J-300", "J-400", "S-900"],
 		"col":"background-color: #0097A7;"
 	},

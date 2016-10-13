@@ -2,6 +2,8 @@
 <link rel="import" href="../../bower_components/app-route/app-route.html">
 <link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
 <link rel="import" href="ciclo-produccion-listagrado.html">
 
 <dom-module id="ciclo-produccion-detalle">
@@ -15,6 +17,10 @@
 				width: 30vw;
 				text-align: center;
 			}
+			#leftpanel-bar{
+				background-image: linear-gradient(to bottom, rgba(0,0,0,.5), rgba(0,0,0,0));
+				height: 50px;
+			}
 			.panel-header{
 				color: white;
 				margin: 10px;
@@ -24,6 +30,9 @@
 			}
 			#btnback paper-icon-button{
 				float: left;
+			}
+			paper-icon-button.white{
+				color: white;
 			}
 			#panel-title{
 				@apply(--paper-font-display1);
@@ -84,6 +93,10 @@
 				padding: 5px 0 5px 0;
 				text-align: left;
 			}
+			.paper-item-link {
+			    color: inherit;
+				text-decoration: none;
+			}
 		</style>
 
 	    <app-route
@@ -92,14 +105,17 @@
 	        data="{{routeData}}"></app-route>
 
 
-		<ciclo-produccion-listagrado data="{{data}}" gradoselec="[[gradoselec]]"></ciclo-produccion-listagrado>
+		<ciclo-produccion-listagrado data="{{data}}"></ciclo-produccion-listagrado>
 
 		<div id="grado_detalle" class="container layout horizontal">
 
 			<paper-card id="leftpanel" style="[[gradoselec.col]]" image="[[gradoselec.img]]" elevation="0">
+				<div id="leftpanel-bar"></div>
 				<div class="panel-header layout horizontal">
 					<div id="btnback">
-						<paper-icon-button icon="arrow-back" class="white" on-tap="backtolist"></paper-icon-button>
+						<a href="/">
+							<paper-icon-button icon="arrow-back" class="white" on-tap="changetoolbarback"></paper-icon-button>
+						</a>
 					</div>
 					<div id="panel-title">[[gradoselec.title]]</div>
 					<div></div>
@@ -134,16 +150,24 @@
 					<div id="rutas" class="layout horizontal">
 						<paper-card id="rutaentradacard" class="flex">
 							<div class="cardtitle">Ruta entrada</div>
-							<template is="dom-repeat" id="domrutaentrada" items="{{gradoselec.rutaentrada}}">
-								<div class="especcont cardruta">[[item]]</div>
-							</template>
+							<paper-listbox>
+								<template is="dom-repeat" id="domrutaentrada" items="{{gradoselec.rutaentrada}}">
+									<a class="paper-item-link" href$="[[_replaceHyphens(item)]]" tabindex="-1">
+										<paper-item>[[item]]</paper-item>
+									</a>
+								</template>
+							</paper-listbox>
 						</paper-card>
 
 						<paper-card id="rutasalidacard" class="flex">
 							<div class="cardtitle">Ruta salida</div>
-							<template is="dom-repeat" id="domrutaentrada" items="{{gradoselec.rutasalida}}">		
-								<div class="especcont cardruta">[[item]]</div>
-							</template>
+							<paper-listbox>
+								<template is="dom-repeat" id="domrutasalida" items="{{gradoselec.rutasalida}}">
+									<a class="paper-item-link" href$="[[_replaceHyphens(item)]]" tabindex="-1">
+										<paper-item>[[item]]</paper-item>
+									</a>
+								</template>
+							</paper-listbox>
 						</paper-card>
 					</div>
 
@@ -171,30 +195,22 @@
 
 		    },
 
-		    ready: function(){
-
-		    },
-
-		    attached: function(){
-		    	console.log(this.routeData.item);
-		    	console.log(this.route);
-		    	console.log(this.data);
-		    	console.log(this.gradoselec);
-		    },
-
 		    _routeChanged: function(){
 				for (var i = this.data.length - 1; i >= 0; i--) {
 					if (this.data[i].name == this.routeData.item) {
 						this.gradoselec = this.data[i];
-						console.log(this.gradoselec);
+						console.log(this.gradoselec.title);
+						var newTitle = this.gradoselec.title.replace(/-/g, "");
+						console.log(newTitle);
 					}
 				}
 		    },
 
-		    backtolist: function(){
-		    	var pages = document.querySelector('iron-pages');
-		    	pages.select(0);
-		    	this.changetoolbarback();
+		    _replaceHyphens: function(item){
+				var newItem = item.replace(/-/g, "");
+				var newerItem = newItem.replace(/ /g, "");
+				var finalItem = newerItem.replace(/Peróxido/g, "");
+				return ['/grado', finalItem].join('/');
 		    },
 
 		    changetoolbarback: function(){

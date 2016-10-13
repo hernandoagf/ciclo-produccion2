@@ -68,7 +68,7 @@
       data="{{routeData}}"
       tail="{{subroute}}"></app-route>
 
-    <ciclo-produccion-listagrado route="{{subroute}}"></ciclo-produccion-listagrado>
+    <ciclo-produccion-listagrado route="{{subroute}}" gradoselec="{{gradoselec}}"></ciclo-produccion-listagrado>
 
     <!-- paper-header-panel must have an explicit height -->
     <paper-header-panel class="flex">
@@ -79,8 +79,8 @@
         
         <iron-pages selected="[[routeData.page]]" attr-for-selected="name">
 
-          <ciclo-produccion-grado name="lista" grado={{grado}}></ciclo-produccion-grado>
-          <ciclo-produccion-detalle name="grado" route="[[subroute]]" gradoselec={{grado}}></ciclo-produccion-detalle>
+          <ciclo-produccion-grado name="" grado={{grado}}></ciclo-produccion-grado>
+          <ciclo-produccion-detalle name="grado" route="[[subroute]]" gradoselec={{gradoselec}}></ciclo-produccion-detalle>
 
         </iron-pages>
       </div>
@@ -89,16 +89,7 @@
 
   <script>
     Polymer({
-      is: 'ciclo-produccion-app',
-
-      ready: function(){
-        /*console.log(this.route);
-        console.log(this.route.path);
-        console.log(this.routeData);
-        console.log(this.routeData.gradoprueba);
-        console.log(this.subroute);*/
-      }
-
+      is: 'ciclo-produccion-app'
     })
   </script>
 </dom-module>

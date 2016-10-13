@@ -35,11 +35,13 @@
         <div class="app-grid" has-aspect-ratio>
             <template is="dom-repeat" id="grado" items="[[data]]">
               <div class="item">
-                <a href="[[item.link]]"><paper-card image="../../images/refinery.jpg" style="[[item.col]]">
-                  <div class="card-content">
-                    <div class="grado-header">[[item.title]]</div>
-                  </div>
-                </paper-card></a>
+                <a href$="[[_getGradoHref(item)]]">
+	                <paper-card image="../../images/refinery.jpg" style="[[item.col]]" on-tap="changetoolbar">
+	                  <div class="card-content">
+	                    <div class="grado-header">[[item.title]]</div>
+	                  </div>
+	                </paper-card>
+                </a>
               </div>
             </template>
             <array-selector id="selector" items="{{data}}" selected="{{selected}}"></array-selector>
@@ -57,19 +59,10 @@
 		      }
 			},
 
-			ready: function(){
-				this.testing = 6;
+			_getGradoHref: function(item){
+				return ['/grado', item.name].join('/');
 			},
 
-			selectgrado: function(e){
-		        var item = this.$.grado.itemForElement(e.target);
-		        this.grado = item;
-
-		        var pages = document.querySelector('iron-pages');
-      			pages.select(1);
-
-      			this.changetoolbar();
-		    },
 		    changetoolbar: function(){
 		    	document.getElementById("toolbar").style.backgroundColor = "white";
 				document.getElementById("toolbar").style.color = "#676767";
