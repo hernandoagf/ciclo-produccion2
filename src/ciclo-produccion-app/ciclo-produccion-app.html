@@ -1,5 +1,7 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/iron-flex-layout/classes/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/app-route/app-route.html">
+<link rel="import" href="../../bower_components/app-route/app-location.html">
 <link rel="import" href="../../bower_components/paper-styles/color.html">
 <link rel="import" href="../../bower_components/paper-styles/typography.html">
 <link rel="import" href="../../bower_components/paper-toolbar/paper-toolbar.html">
@@ -12,7 +14,8 @@
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-grado.html">
 <link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-detalle.html">
-<link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-test.html">
+<link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-listagrado.html">
+
 
 <dom-module id="ciclo-produccion-app">
   <template>
@@ -20,12 +23,16 @@
       :host {
         height: 100vh;
         display: block;
-        background-color: var(--paper-grey-300);
-        /*--app-grid-columns: 5;
-        --app-grid-item-height: 70%;*/
+        background-color: var(--paper-grey-200);
       }
       paper-toolbar{
         background-color: var(--paper-red-700);
+      }
+      iron-pages{
+        height: 100%;
+      }
+      ciclo-produccion-detalle{
+        height: 100%;
       }
       .fit{
         text-align: center;
@@ -59,6 +66,16 @@
       }
     </style>
 
+    <app-location route="{{route}}"></app-location>
+
+    <app-route
+      route="{{route}}"
+      pattern="/:page"
+      data="{{routeData}}"
+      tail="{{subroute}}"></app-route>
+
+    <ciclo-produccion-listagrado route="{{subroute}}" gradoselec="{{gradoselec}}"></ciclo-produccion-listagrado>
+
     <!-- paper-header-panel must have an explicit height -->
     <paper-header-panel class="flex">
       <paper-toolbar id="toolbar">
@@ -66,63 +83,19 @@
       </paper-toolbar>
       <div class="fit">
         
-        <!--<iron-ajax
-          auto
-          url="../../data/inyeccion_homo.json"
-          last-response="{{data}}"
-          handle-as="json">
-        </iron-ajax>-->
+        <iron-pages selected="[[routeData.page]]" attr-for-selected="name">
 
-        <iron-pages selected="0">
-        
-          <!--<div class="app-grid" has-aspect-ratio>
-            <template is="dom-repeat" id="grado" items="[[data]]">
-              <div class="item">
-                <paper-card image="../../images/refinery.jpg" style="[[item.col]]" on-tap="selectgrado">
-                  <div class="card-content">
-                    <div class="grado-header">[[item.title]]</div>
-                  </div>
-                </paper-card>
-              </div>
-            </template>
-            <array-selector id="selector" items="{{data}}" selected="{{selected}}"></array-selector>
-          </div>-->
-          <ciclo-produccion-grado data="{{data}}" hola="{{hola}}"></ciclo-produccion-grado>
-          <ciclo-produccion-detalle hola="{{hola}}"></ciclo-produccion-detalle>
-          <!--<div id="detallegrado" class="fit layout horizontal">
-            <div class="maininfogrado layout vertical" style="[[selected.col]]">
-              <img src="../../images/refinery.jpg" width="100%"></img>
-              <div class="grado-name">[[selected.title]]</div>
-            </div>
-          </div>-->
+          <ciclo-produccion-grado name="" grado={{grado}}></ciclo-produccion-grado>
+          <ciclo-produccion-detalle name="grado" route="[[subroute]]" gradoselec={{gradoselec}}></ciclo-produccion-detalle>
 
         </iron-pages>
-
-        <div>{{data}}</div>
-
       </div>
     </paper-header-panel>
-    <ciclo-produccion-test probando="{{probando}}"></ciclo-produccion-test>
   </template>
 
   <script>
     Polymer({
-      is: 'ciclo-produccion-app',
-
-      ready: function(){
-          console.log(this.probando + "ciclo-produccion-app");
-      }
-
-      // selectgrado: function(e){
-      //   var item = this.$.grado.itemForElement(e.target);
-      //   this.$.selector.select(item);  
-      //   var pages = document.querySelector('iron-pages');
-      //   pages.select(1);
-      //   document.getElementById("toolbar").style.backgroundColor = "white";
-      //   document.getElementById("toolbar").style.color = "#676767";
-      // },
-
-
+      is: 'ciclo-produccion-app'
     })
   </script>
 </dom-module>
