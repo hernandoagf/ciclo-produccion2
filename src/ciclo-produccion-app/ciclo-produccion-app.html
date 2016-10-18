@@ -11,6 +11,7 @@
 <link rel="import" href="../../bower_components/paper-styles/color.html">
 <link rel="import" href="../../bower_components/paper-styles/typography.html">
 <link rel="import" href="../../bower_components/app-layout/app-grid/app-grid-style.html">
+<link rel="import" href="../../bower_components/app-layout/helpers/helpers.html">
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-grado.html">
 <link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-detalle.html">
@@ -79,6 +80,7 @@
     <!-- paper-header-panel must have an explicit height -->
     <paper-header-panel class="flex">
       <paper-toolbar id="toolbar">
+        <img src="../../images/ppv.png" width="99" height="64">
         <span class="title">Propilven</span>
       </paper-toolbar>
       <div class="fit">
@@ -95,7 +97,18 @@
 
   <script>
     Polymer({
-      is: 'ciclo-produccion-app'
+      is: 'ciclo-produccion-app',
+
+      /*observers: [
+        '_routePageChanged(routeData.page)'
+      ],
+
+      _routePageChanged: function(page) {
+        this.page = page || '';
+        // Scroll to the top of the page on every *route* change. Use `Polymer.AppLayout.scroll`
+        // with `behavior: 'silent'` to disable header scroll effects during the scroll.
+        Polymer.AppLayout.scroll({ top: 0, behavior: 'silent' });
+      },*/
     })
   </script>
 </dom-module>

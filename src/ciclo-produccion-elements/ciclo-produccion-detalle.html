@@ -7,12 +7,12 @@
 <link rel="import" 
 	href="../../bower_components/iron-scroll-target-behavior/iron-scroll-target-behavior.html">
 <link rel="import" href="ciclo-produccion-listagrado.html">
+<link rel="import" href="ciclo-produccion-condiciones.html">
 
 <dom-module id="ciclo-produccion-detalle">
 	<template>
 		<style>
 			#grado_detalle{
-				/*height: 91.7vh;*/
 				height: 100%;
 				overflow: hidden;
 			}
@@ -175,6 +175,8 @@
 						</paper-card>
 					</div>
 
+					<ciclo-produccion-condiciones gradoselec={{gradoselec}}></ciclo-produccion-condiciones>
+
 				</div>
 			</div>
 		</div>
@@ -203,9 +205,7 @@
 				for (var i = this.data.length - 1; i >= 0; i--) {
 					if (this.data[i].name == this.routeData.item) {
 						this.gradoselec = this.data[i];
-						console.log(this.gradoselec.title);
 						var newTitle = this.gradoselec.title.replace(/-/g, "");
-						console.log(newTitle);
 					}
 				}
 		    },
