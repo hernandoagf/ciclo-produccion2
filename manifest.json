@@ -1,6 +1,8 @@
 {
   "name": "ciclo-produccion",
+  "scope": "./",
   "short_name": "ciclo-produccion",
-  "start_url": "/",
-  "display": "standalone"
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "any"
 }
