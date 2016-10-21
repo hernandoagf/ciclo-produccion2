@@ -11,23 +11,37 @@
 			:host {
 				--app-grid-columns: 5;
         		--app-grid-item-height: 70%;
+        		--app-grid-gutter: 20px;
 			};
 			.app-grid{
-			    width: 80%;
-			    margin-left: 20%;
-			    margin-top: 20px;
-			    margin-bottom: 50px;
+			    /*width: 80%;
+	            */@apply(--layout-wrap);
+	            margin: 20px 70px 50px 70px;
 		    }
 		    .item{
-			    margin: 20px;
+			    /*margin: 20px;*/
 			    /*font-size: 20px;*/
 			    color: white;
 			    text-align: left;
 		    }
+		    .app-grid .item{
+	    	    -webkit-flex: 1 1;
+	        	flex: 1 1;
+	    	    -webkit-flex-basis: 18%;
+	        	flex-basis: 18%;
+	        	max-width: 18%;
+      		}
+      		@media (max-width: 767px) {
+		        .app-grid .item{
+		          -webkit-flex-basis: 50%;
+		          flex-basis: 50%;
+		          max-width: 50%;
+		        }
+		    }
 		    a{
 		    	color: white;
 		    }
-		    .grado-header{ @apply(--paper-font-title); }
+		    .grado-header{ @apply(--paper-font-headline); }
 		</style>
 
 		<ciclo-produccion-listagrado data="{{data}}" testvar="{{testing}}"></ciclo-produccion-listagrado>
