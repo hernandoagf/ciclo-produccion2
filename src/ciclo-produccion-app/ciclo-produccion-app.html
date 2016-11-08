@@ -21,6 +21,7 @@
 <link rel="import" href="../../bower_components/paper-menu/paper-menu.html">
 <link rel="import" href="../../bower_components/paper-menu-button/paper-menu-button.html">
 <link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../ciclo-produccion-elements/na-login.html">
 <link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-grado.html">
 <link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-detalle.html">
 <link rel="import" href="../ciclo-produccion-elements/ciclo-produccion-listagrado.html">
@@ -90,6 +91,8 @@
     </firebase-app>
 
     <firebase-auth id="auth" user="{{user}}" provider="google"></firebase-auth>
+
+    <!--<na-login></na-login>-->
 
     <ciclo-produccion-listagrado route="{{subroute}}" gradoselec="{{gradoselec}}"></ciclo-produccion-listagrado>
 
