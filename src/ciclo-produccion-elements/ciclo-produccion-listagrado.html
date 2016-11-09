@@ -9,12 +9,17 @@
 		pattern="/:gradoroute"
 		data="{{routeData}}"></app-route>
 		
-		<iron-ajax
+		<!-- <iron-ajax
           auto
           url="../../data/inyeccion_homo.json"
           last-response="{{data}}"
           handle-as="json">
-        </iron-ajax>
+        </iron-ajax> -->
+
+		<firebase-query
+			id="query"
+			data="{{data}}">
+		</firebase-query>
 
 	</template>
 	<script>

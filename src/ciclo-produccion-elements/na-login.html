@@ -7,23 +7,24 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
-<link rel="import" href="../paper-button/paper-button.html">
-<link rel="import" href="../iron-icon/iron-icon.html">
-<link rel="import" href="../iron-icons/iron-icons.html">
-<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
 <dom-module id="na-login">
   <template>
     <style>
       :host {
         position: absolute;
-        top: 46px;
+        top: 64px;
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: var(--paper-purple-500);
+        background-color: var(--paper-indigo-800);
         transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 1;
-        color: var(--paper-purple-50);
 
         @apply(--layout);
         @apply(--layout-center-center);
@@ -34,15 +35,53 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         pointer-events: none;
       }
 
+      paper-card {
+        width: 350px;
+        height: 250px;
+        padding: 20px;
+      }
+
+      #titulo {
+        @apply(--layout-horizontal);
+      }
+
+      iron-icon {
+        margin-top: 2px;
+        color: var(--paper-red-a400);
+      }
+
+      #titulo span {
+        @apply(--paper-font-title);
+        padding-left: 10px;
+      }
+
+      #btn-cont {
+        @apply(--layout-horizontal);
+        @apply(--layout-center-justified);
+      }
+
+      paper-button {
+        background-color: var(--paper-red-a400);
+        color: white;
+        margin-top: 1em;
+      }
+
       paper-button > * {
         vertical-align: middle;
         text-transform: none;
       }
     </style>
-    <paper-button on-tap="signIn" disabled="[[disabled]]">
-      <iron-icon icon="account-circle"></iron-icon>
-      <span>Sign in with Google</span>
-    </paper-button>
+    <paper-card>
+      <div id="titulo">
+        <iron-icon icon="account-circle"></iron-icon>
+        <span>Iniciar sesión</span>
+      </div>
+      <paper-input label="Email" value={{email}}></paper-input>
+      <paper-input label="Contraseña" type="password" value={{password}}></paper-input>
+      <div id="btn-cont">
+        <paper-button on-tap="signIn" disabled="[[disabled]]">Iniciar sesión</paper-button>
+      </div>
+    </paper-card>
   </template>
   <script>
     Polymer({
@@ -59,6 +98,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           type: Boolean,
           reflectToAttribute: true,
           value: false
+        },
+
+        email: {
+          type: String,
+          notify: true
+        },
+
+        password: {
+          type: String,
+          notify: true
         }
       },
 

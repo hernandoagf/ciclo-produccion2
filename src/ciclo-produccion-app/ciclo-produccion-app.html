@@ -36,7 +36,7 @@
         background-color: var(--paper-grey-200);
       }
       paper-toolbar{
-        background-color: var(--paper-red-700);
+        background-color: var(--paper-indigo-500);
       }
       iron-pages{
         height: 100%;
@@ -90,9 +90,14 @@
       api-key="AIzaSyALM99W76I1jmA5Lr7k9_7Yqn_KXTyuc6o">
     </firebase-app>
 
-    <firebase-auth id="auth" user="{{user}}" provider="google"></firebase-auth>
+    <firebase-auth id="auth" signed-in="{{signedIn}}" user="{{user}}"></firebase-auth>
 
-    <!--<na-login></na-login>-->
+    <na-login
+      email="{{email}}"
+      password="{{password}}"
+      on-sign-in="signIn"
+      signed-in="[[signedIn]]"
+      disabled="[[!online]]"></na-login>
 
     <ciclo-produccion-listagrado route="{{subroute}}" gradoselec="{{gradoselec}}"></ciclo-produccion-listagrado>
 
@@ -101,14 +106,15 @@
       <paper-toolbar id="toolbar">
         <img src="../../images/ppv.png" width="99" height="64">
         <span class="title">Propilven</span>
-        <paper-menu-button horizontal-align="right">
+        <paper-button hidden$="[[!signedIn]]" on-tap="signOut">Cerrar sesión</paper-button>
+        <!-- <paper-menu-button horizontal-align="right">
           <paper-icon-button icon="account-circle" class="dropdown-trigger"></paper-icon-button>
           <paper-menu class="dropdown-content">
             <paper-item>Share</paper-item>
             <paper-item>Settings</paper-item>
             <paper-item>Help</paper-item>
           </paper-menu>
-        </paper-menu-button>
+        </paper-menu-button> -->
           <!--<paper-button on-tap="signIn">
             <iron-icon icon="account-circle"></iron-icon>
           </paper-button>-->
@@ -130,7 +136,13 @@
       is: 'ciclo-produccion-app',
 
       signIn: function() {
-        this.$.auth.signInWithPopup();
+        this.$.auth.signInWithEmailAndPassword(this.email, this.password);
+      },
+
+      signOut: function() {
+        if (this.$.auth) {
+          this.$.auth.signOut();
+        }
       }
       /*observers: [
         '_routePageChanged(routeData.page)'
