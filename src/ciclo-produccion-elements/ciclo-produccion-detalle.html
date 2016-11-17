@@ -6,6 +6,8 @@
 <link rel="import" href="../../bower_components/paper-item/paper-item.html">
 <link rel="import" 
 	href="../../bower_components/iron-scroll-target-behavior/iron-scroll-target-behavior.html">
+<link rel="import" href="../../bower_components/iron-overlay-behavior/iron-overlay-behavior.html">
+<link rel="import" href="../../bower_components/iron-overlay-behavior/demo/simple-overlay.html">
 <link rel="import" href="ciclo-produccion-listagrado.html">
 <link rel="import" href="ciclo-produccion-condiciones.html">
 
@@ -101,6 +103,23 @@
 			    color: inherit;
 				text-decoration: none;
 			}
+			#backdrop {
+				max-width: 80vw;
+			}
+			#transtitle {
+				text-align: center;
+				@apply(--paper-font-title);
+			}
+			#proced {
+				text-align: left;
+				@apply(--paper-font-body1);
+				margin-top: 1em;
+				margin-bottom: 1em;
+			}
+			simple-overlay paper-button {
+				background-color: var(--paper-red-a400);
+				color: white;
+			}
 		</style>
 
 	    <app-route
@@ -108,8 +127,23 @@
 	        pattern="/:item"
 	        data="{{routeData}}"></app-route>
 
-
 		<ciclo-produccion-listagrado data="{{data}}"></ciclo-produccion-listagrado>
+
+
+		<iron-ajax
+          auto
+          url="../../data/transiciones.json"
+          last-response="{{datatran}}"
+          handle-as="json">
+        </iron-ajax>
+
+
+		<button onclick="backdrop.open()" on-tap="fcntest">Transición</button>
+		<simple-overlay id="backdrop" with-backdrop>
+			<span id="transtitle"></span>
+			<div id="proced"></div>
+			<paper-button onclick="backdrop.close()" raised>Cerrar</paper-button>
+		</simple-overlay>
 
 		<div id="grado_detalle" class="container layout horizontal">
 
@@ -118,7 +152,7 @@
 				<div class="panel-header layout horizontal">
 					<div id="btnback">
 						<a href="/">
-							<paper-icon-button icon="arrow-back" class="white" on-tap="changetoolbarback"></paper-icon-button>
+							<paper-icon-button icon="arrow-back" class="white"></paper-icon-button>
 						</a>
 					</div>
 					<div id="panel-title">[[gradoselec.title]]</div>
@@ -156,8 +190,8 @@
 							<div class="cardtitle">Ruta entrada</div>
 							<paper-listbox>
 								<template is="dom-repeat" id="domrutaentrada" items="{{gradoselec.rutaentrada}}">
-									<a class="paper-item-link" href$="[[_replaceHyphens(item)]]" tabindex="-1">
-										<paper-item>[[item]]</paper-item>
+									<a class="paper-item-link" tabindex="-1">
+										<paper-item id="[[item]]" on-tap="fcnEntrada">[[item]]</paper-item>
 									</a>
 								</template>
 							</paper-listbox>
@@ -167,8 +201,8 @@
 							<div class="cardtitle">Ruta salida</div>
 							<paper-listbox>
 								<template is="dom-repeat" id="domrutasalida" items="{{gradoselec.rutasalida}}">
-									<a class="paper-item-link" href$="[[_replaceHyphens(item)]]" tabindex="-1">
-										<paper-item>[[item]]</paper-item>
+									<a class="paper-item-link" tabindex="-1">
+										<paper-item id="[[item]]" on-tap="fcnSalida">[[item]]</paper-item>
 									</a>
 								</template>
 							</paper-listbox>
@@ -188,7 +222,7 @@
 
 			properties: {
 
-				item: Object,
+				item: String,
 
 		        route: {
 		        	type: Object,
@@ -210,12 +244,61 @@
 				}
 		    },
 
-		    _replaceHyphens: function(item){
+		  //   _replaceHyphens: function(item){
+				// var newItem = item.replace(/-/g, "");
+				// var newerItem = newItem.replace(/ /g, "");
+				// var finalItem = newerItem.replace(/Peróxido/g, "");
+				// return ['/grado', finalItem].join('/');
+		  //   },
+
+		  	_replaceHyphons: function(item){
 				var newItem = item.replace(/-/g, "");
 				var newerItem = newItem.replace(/ /g, "");
 				var finalItem = newerItem.replace(/Peróxido/g, "");
-				return ['/grado', finalItem].join('/');
+
+				var toggrad = ([this.gradoselec.name, finalItem].join(''));
+				var toggrad2 = (['this', 'datatran', toggrad].join('.'));
+				console.log(toggrad2);
+
+				// document.getElementById("proced").innerHTML = this.datatran+'.'+toggrad;
+
+
+				// return ['/grado', finalItem].join('/');
 		    },
+
+		    fcntest: function(){
+		    	document.getElementById("proced").innerHTML = this.datatran.J300J400;
+		    },
+
+		    fcnEntrada: function(e){
+		    	var oldRtent = e.srcElement.id
+		    	var newRtent = oldRtent.replace(/-/g, "");
+		    	var defRtent = ([newRtent, this.gradoselec.name].join(''));
+
+		    	for (var i = this.datatran.length - 1; i >= 0; i--) {
+					if (this.datatran[i].name == defRtent) {
+						document.getElementById("transtitle").innerHTML = this.datatran[i].titulo;
+						document.getElementById("proced").innerHTML = this.datatran[i].tran;
+					}
+				}
+
+				backdrop.open();
+		    },
+
+		    fcnSalida: function(e){
+		    	var oldRtsal = e.srcElement.id
+		    	var newRtsal = oldRtsal.replace(/-/g, "");
+		    	var defRtsal = ([this.gradoselec.name, newRtsal].join(''));
+
+		    	for (var i = this.datatran.length - 1; i >= 0; i--) {
+					if (this.datatran[i].name == defRtsal) {
+						document.getElementById("transtitle").innerHTML = this.datatran[i].titulo;
+						document.getElementById("proced").innerHTML = this.datatran[i].tran;
+					}
+				}
+
+				backdrop.open();
+		    }
 
 		  //   changetoolbarback: function(){
 		  //   	document.getElementById("toolbar").style.backgroundColor = "#d32f2f";

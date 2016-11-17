@@ -7,7 +7,7 @@
     "paper-card": "PolymerElements/paper-card#^1.1.2",
     "paper-input": "PolymerElements/paper-input#^1.1.18",
     "paper-drawer-panel": "PolymerElements/paper-drawer-panel#^1.0.10",
-    "iron-overlay-behavior": "PolymerElements/iron-overlay-behavior#^1.8.6",
+    "iron-overlay-behavior": "PolymerElements/iron-overlay-behavior#^1.10.1",
     "paper-progress": "PolymerElements/paper-progress#^1.0.10",
     "app-layout": "PolymerElements/app-layout#^0.10.4",
     "iron-pages": "PolymerElements/iron-pages#^1.0.8",

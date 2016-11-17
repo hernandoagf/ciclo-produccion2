@@ -4,6 +4,7 @@
 <link rel="import" href="../../bower_components/app-route/app-location.html">
 <link rel="import" href="../../bower_components/polymerfire/firebase-app.html">
 <link rel="import" href="../../bower_components/polymerfire/firebase-auth.html">
+<link rel="import" href="../../bower_components/polymerfire/firebase-query.html">
 <link rel="import" href="../../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
 <link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
@@ -37,6 +38,7 @@
       }
       paper-toolbar{
         background-color: var(--paper-indigo-500);
+        padding: 0px 10px;
       }
       iron-pages{
         height: 100%;
@@ -92,6 +94,12 @@
 
     <firebase-auth id="auth" signed-in="{{signedIn}}" user="{{user}}"></firebase-auth>
 
+    <!-- <firebase-query
+      id="query"
+      path="/Name1"
+      data="{{data}}">
+    </firebase-query> -->
+
     <na-login
       email="{{email}}"
       password="{{password}}"
@@ -104,7 +112,7 @@
     <!-- paper-header-panel must have an explicit height -->
     <paper-header-panel class="flex">
       <paper-toolbar id="toolbar">
-        <img src="../../images/ppv.png" width="99" height="64">
+        <img src="../../images/logotest.png" width="45" height="45">
         <span class="title">Propilven</span>
         <paper-button hidden$="[[!signedIn]]" on-tap="signOut">Cerrar sesión</paper-button>
         <!-- <paper-menu-button horizontal-align="right">
@@ -121,6 +129,9 @@
       </paper-toolbar>
       <div class="fit">
         
+        <!-- <paper-button on-tap="prueba">Probando</paper-button>
+        <div id="informa">[[infovar]]</div> -->
+
         <iron-pages selected="[[routeData.page]]" attr-for-selected="name">
 
           <ciclo-produccion-grado name="" grado={{grado}}></ciclo-produccion-grado>
@@ -135,6 +146,16 @@
     Polymer({
       is: 'ciclo-produccion-app',
 
+      // properties: {
+      //   data: {
+      //     type: Object,
+      //     observer: 'dataChanged'
+      //   },
+      //   infovar: {
+      //     type: String
+      //   }
+      // },
+
       signIn: function() {
         this.$.auth.signInWithEmailAndPassword(this.email, this.password);
       },
@@ -143,7 +164,21 @@
         if (this.$.auth) {
           this.$.auth.signOut();
         }
-      }
+      },
+
+      // prueba: function(){
+      //   console.log(this.data);
+      //   console.log(this.data[0]);
+      //   this.testvar = this.data[0];
+      //   console.log(this.testvar.Subsub1);
+      //   this.infovar = this.testvar.Subsub1;
+
+      //   document.getElementById("informa").innerHTML = this.testvar.Subsub1;
+      // },
+
+      // dataChanged: function(newData, oldData){
+      //   console.log(newData);
+      // }
       /*observers: [
         '_routePageChanged(routeData.page)'
       ],
